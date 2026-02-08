@@ -1,6 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSmileBeam, FaPaperPlane, FaSearch, FaChartLine } from 'react-icons/fa';
+import { FaSmileBeam, FaPaperPlane } from 'react-icons/fa';
 
 // Ленивая загрузка компонентов для производительности 
 const Header = lazy(() => import('./components/Header'));
@@ -22,6 +22,29 @@ import './styles/components/contact.css';
 import './styles/components/footer.css';
 import './styles/utilities/responsive.css';
 import './styles/utilities/theme.css';
+
+// Константы для метрик (замените на свои реальные ID)
+const YANDEX_METRICA_ID = 12345678;
+const GOOGLE_ANALYTICS_ID = 'G-XXXXXXXXXX';
+
+// Функции для трекинга
+const trackGAEvent = (eventName, eventParams = {}) => {
+  if (window.gtag && typeof window.gtag === 'function') {
+    window.gtag('event', eventName, eventParams);
+  }
+};
+
+const trackYMEvent = (goalName, params = {}) => {
+  if (window.ym && typeof window.ym === 'function') {
+    window.ym(YANDEX_METRICA_ID, 'reachGoal', goalName, params);
+  }
+};
+
+const trackEvent = (eventName, params = {}) => {
+  trackGAEvent(eventName, params);
+  trackYMEvent(eventName, params);
+  console.log(`📊 Tracked: ${eventName}`, params);
+};
 
 // Компонент для частиц фона
 const BackgroundParticles = () => {
@@ -82,10 +105,16 @@ const FloatingShapes = () => {
 function App() {
   const [isDark, setIsDark] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     // Загрузка данных
-    const timer = setTimeout(() => setIsLoading(false), 1000);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      trackEvent('portfolio_loaded', {
+        load_time: Date.now() - performance.timing.navigationStart
+      });
+    }, 1000);
     
     // Добавляем стили для сердечка курсора
     const style = document.createElement('style');
@@ -104,19 +133,45 @@ function App() {
     `;
     document.head.appendChild(style);
     
+    // Трекинг скролла
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollPercentage = Math.round(
+        (currentScrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+      );
+      
+      // Отслеживаем глубину скролла каждые 25%
+      if (scrollPercentage >= 25 && scrollPercentage < 50 && lastScrollY < 25) {
+        trackEvent('scroll_depth', { depth: '25%' });
+      } else if (scrollPercentage >= 50 && scrollPercentage < 75 && lastScrollY < 50) {
+        trackEvent('scroll_depth', { depth: '50%' });
+      } else if (scrollPercentage >= 75 && scrollPercentage < 100 && lastScrollY < 75) {
+        trackEvent('scroll_depth', { depth: '75%' });
+      } else if (scrollPercentage >= 100 && lastScrollY < 100) {
+        trackEvent('scroll_depth', { depth: '100%' });
+      }
+      
+      setLastScrollY(scrollPercentage);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
     return () => {
       clearTimeout(timer);
       document.head.removeChild(style);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
     document.body.classList.toggle('dark-theme');
+    trackEvent('theme_toggle', { theme: !isDark ? 'dark' : 'light' });
   };
 
   // Функция для конфетти
   const createConfetti = () => {
+    trackEvent('confetti_launched');
     const colors = [
       'var(--primary-pink)',
       'var(--secondary-pink)',
@@ -191,6 +246,7 @@ function App() {
         className="floating-contact-btn"
         whileHover={{ scale: 1.1, rotate: 5 }}
         whileTap={{ scale: 0.9 }}
+        onClick={() => trackEvent('floating_button_click', { button_type: 'contact' })}
       >
         <span className="pulse-ring"></span>
         <FaPaperPlane style={{ fontSize: '18px' }} />

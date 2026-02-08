@@ -32,7 +32,6 @@
   line-height: 1.6;
 }
 
-/* Categories */
 .skills-categories-container {
   margin-bottom: 40px;
 }
@@ -120,7 +119,6 @@
   border: 1px solid rgba(255, 107, 139, 0.1);
 }
 
-/* Skills Grid */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -204,7 +202,6 @@
   flex-shrink: 0;
 }
 
-/* Progress Bar */
 .skill-progress-container {
   margin: 20px 0;
   position: relative;
@@ -246,7 +243,6 @@
   opacity: 1;
 }
 
-/* Skill Description */
 .skill-description {
   display: flex;
   justify-content: space-between;
@@ -279,7 +275,6 @@
   border-radius: 10px;
 }
 
-/* Summary */
 .skills-summary {
   background: white;
   border-radius: 16px;

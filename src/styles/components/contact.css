@@ -18,7 +18,7 @@
 }
 
 .contact-title:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -44,7 +44,6 @@
   margin-top: 40px;
 }
 
-/* Contact Info */
 .contact-info-wrapper {
   display: flex;
   flex-direction: column;
@@ -62,7 +61,7 @@
 }
 
 .contact-info-card:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -167,7 +166,6 @@
   transform: translateX(5px);
 }
 
-/* Social Section */
 .social-section {
   margin-top: 30px;
   padding-top: 30px;
@@ -229,7 +227,6 @@
   transform: translateY(-3px);
 }
 
-/* Form Styles */
 .contact-form-wrapper {
   display: flex;
   flex-direction: column;
@@ -247,7 +244,7 @@
 }
 
 .form-container:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -275,7 +272,6 @@
   color: var(--medium-pink);
 }
 
-/* Form Elements */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -294,7 +290,7 @@
   border-bottom: 2px solid rgba(255, 107, 139, 0.2);
   background: transparent;
   font-size: 15px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--pink-gray);
   transition: all var(--transition-fast);
   resize: none;
@@ -346,7 +342,6 @@
   width: 100%;
 }
 
-/* Submit Button */
 .submit-btn {
   position: relative;
   padding: 18px;
@@ -383,7 +378,6 @@
   margin-top: 10px;
 }
 
-/* Success Message */
 .success-container {
   text-align: center;
   padding: 40px 20px;
@@ -436,7 +430,6 @@
   color: white;
 }
 
-/* Availability Card */
 .availability-card {
   background: linear-gradient(135deg, var(--white) 0%, var(--light-pink) 100%);
   border-radius: 20px;
@@ -470,7 +463,7 @@
 }
 
 .availability-header h4:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -510,7 +503,7 @@
 }
 
 .availability-type:before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   top: 0;
@@ -563,7 +556,7 @@
 }
 
 .cta-card:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -605,7 +598,7 @@
 }
 
 .cta-btn:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -645,11 +638,11 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .contact-info-wrapper {
     order: 2;
   }
-  
+
   .contact-form-wrapper {
     order: 1;
   }
@@ -659,22 +652,22 @@
   .contact-title {
     font-size: 36px;
   }
-  
+
   .contact-subtitle {
     font-size: 16px;
   }
-  
+
   .contact-info-card,
   .form-container,
   .availability-card,
   .cta-card {
     padding: 25px;
   }
-  
+
   .social-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .contact-detail-card {
     padding: 15px;
   }
@@ -684,49 +677,49 @@
   .contact-title {
     font-size: 32px;
   }
-  
+
   .contact-header {
     margin-bottom: 40px;
   }
-  
+
   .contact-info-card,
   .form-container,
   .availability-card,
   .cta-card {
     padding: 20px;
   }
-  
+
   .info-header h3 {
     font-size: 20px;
   }
-  
+
   .form-title-main {
     font-size: 20px;
   }
-  
+
   .social-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
-  
+
   .social-card {
     padding: 12px 5px;
   }
-  
+
   .cta-content h4 {
     font-size: 20px;
   }
-  
+
   .cta-btn {
     padding: 14px 24px;
     font-size: 15px;
   }
-  
+
   .availability-tags {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .availability-tag {
     width: 100%;
     text-align: center;

@@ -6,11 +6,83 @@ const Hero = () => {
 
   const techStack = ['React', 'Node.js', 'TypeScript', 'MongoDB'];
 
-  //  Что-то сделать с лицом (попроще)
+  // Что-то сделать с лицом (попроще)
   const avatarUrl = "https://i.ibb.co/hJ6qZSDF/photo-5208418342518068321-y.jpg";
+
+  // Функции трекинга для Hero
+  const trackCVDownload = () => {
+    if (window.gtag) {
+      window.gtag('event', 'cv_download', {
+        method: 'hero_section'
+      });
+    }
+    if (window.ym) {
+      window.ym(12345678, 'reachGoal', 'cv_download');
+    }
+  };
+
+  const trackGitHubClick = () => {
+    if (window.gtag) {
+      window.gtag('event', 'github_click', {
+        section: 'hero',
+        action: 'projects_button'
+      });
+    }
+    if (window.ym) {
+      window.ym(12345678, 'reachGoal', 'github_click');
+    }
+  };
+
+  const trackContactClick = () => {
+    if (window.gtag) {
+      window.gtag('event', 'contact_click', {
+        section: 'hero',
+        action: 'contact_button'
+      });
+    }
+    if (window.ym) {
+      window.ym(12345678, 'reachGoal', 'contact_click');
+    }
+  };
+
+  const trackPhoneClick = () => {
+    if (window.gtag) {
+      window.gtag('event', 'phone_click', {
+        section: 'hero',
+        phone_number: '+79154747073'
+      });
+    }
+    if (window.ym) {
+      window.ym(12345678, 'reachGoal', 'phone_click');
+    }
+  };
+
+  const trackEmailClick = () => {
+    if (window.gtag) {
+      window.gtag('event', 'email_click', {
+        section: 'hero',
+        email: 'bragina.liz@yandex.ru'
+      });
+    }
+    if (window.ym) {
+      window.ym(12345678, 'reachGoal', 'email_click');
+    }
+  };
 
   const scrollToNextSection = (e) => {
     e.preventDefault();
+    
+    // Трекинг скролла
+    if (window.gtag) {
+      window.gtag('event', 'scroll_click', {
+        section: 'hero',
+        direction: 'down'
+      });
+    }
+    if (window.ym) {
+      window.ym(12345678, 'reachGoal', 'scroll_click');
+    }
+    
     const nextSection = document.querySelector('#experience') || document.querySelector('#about');
     if (nextSection) {
       nextSection.scrollIntoView({ 
@@ -113,7 +185,13 @@ const Hero = () => {
               </svg>
               <div className="contact-info">
                 <span className="contact-label">Телефон</span>
-                <a href="tel:+79154747073" className="contact-value">+7 915 474-70-73</a>
+                <a 
+                  href="tel:+79154747073" 
+                  className="contact-value"
+                  onClick={trackPhoneClick}
+                >
+                  +7 915 474-70-73
+                </a>
               </div>
             </div>
             <div className="contact-item">
@@ -122,7 +200,13 @@ const Hero = () => {
               </svg>
               <div className="contact-info">
                 <span className="contact-label">Email</span>
-                <a href="mailto:bragina.liz@yandex.ru" className="contact-value">bragina.liz@yandex.ru</a>
+                <a 
+                  href="mailto:bragina.liz@yandex.ru" 
+                  className="contact-value"
+                  onClick={trackEmailClick}
+                >
+                  bragina.liz@yandex.ru
+                </a>
               </div>
             </div>
           </motion.div>
@@ -139,6 +223,7 @@ const Hero = () => {
               className="btn btn-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={trackGitHubClick}
             >
               <FaGithub />
               Мои проекты
@@ -148,6 +233,7 @@ const Hero = () => {
               className="btn btn-secondary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={trackContactClick}
             >
               Связаться со мной
             </motion.a>

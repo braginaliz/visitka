@@ -339,8 +339,7 @@
   }
 }
 
-/* КОММЕНТАРИЙ: Все стили курсора должны быть в main.css для единообразия и избежания конфликтов */
-/* Удалены все cursor свойства из этого файла, так как они заданы глобально в main.css */
+
 /* Мобильное меню - кнопка */
 .mobile-menu-toggle {
   display: none;
@@ -428,7 +427,7 @@
   50% { opacity: 0.5; transform: scale(1.2); }
 }
 
-/* Социальные ссылки в мобильном меню */
+
 .mobile-social-links {
   display: flex;
   justify-content: center;
@@ -459,7 +458,7 @@
   box-shadow: var(--shadow-soft);
 }
 
-/* Темная тема для мобильного меню */
+
 .App.dark .mobile-menu {
   background: rgba(26, 26, 46, 0.98);
   border-bottom: 1px solid rgba(255, 107, 139, 0.15);
@@ -496,7 +495,7 @@
 
 /* Адаптивность */
 @media (max-width: 900px) {
-  /* Скрываем десктопные элементы */
+  
   .desktop-nav {
     display: none !important;
   }
@@ -505,7 +504,7 @@
     display: none !important;
   }
   
-  /* Показываем мобильные элементы */
+ 
   .mobile-menu-toggle {
     display: flex;
   }
@@ -514,7 +513,7 @@
     display: block;
   }
   
-  /* Адаптируем хедер */
+  
   .header-controls {
     gap: 15px;
   }
@@ -549,7 +548,7 @@
   }
 }
 
-/* Плавная анимация для иконки меню */
+
 .mobile-menu-toggle svg {
   transition: transform 0.3s ease;
 }
@@ -558,7 +557,7 @@
   transform: rotate(180deg);
 }
 
-/* Анимация для пунктов меню */
+
 @keyframes slideIn {
   from {
     opacity: 0;

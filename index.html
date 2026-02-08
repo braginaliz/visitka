@@ -47,6 +47,28 @@
     <!-- Канноничный URL -->
     <link rel="canonical" href="https://braginaliz.github.io/visitka" />
 
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Яндекс.Метрика -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106723032', 'ym');
+
+    ym(106723032, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106723032" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
     <!-- Schema.org -->
     <script type="application/ld+json">
       {
@@ -201,7 +223,7 @@
     <!-- Безопасность -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.googletagmanager.com https://mc.yandex.ru; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;"
     />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="DENY" />
@@ -248,7 +270,7 @@
       aria-label="Портфолио Брагиной Елизаветы - Fullstack-разработчик"
     ></div>
 
-    <!--  Загрузка скрипта асинхронно -->
+    <!-- Загрузка скрипта асинхронно -->
     <script
       type="module"
       src="/src/main.jsx"
@@ -257,17 +279,28 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Трекинг загрузки страницы -->
     <script>
       window.addEventListener("load", function () {
+        // Отслеживаем метрики производительности
         if ("PerformanceObserver" in window) {
           const observer = new PerformanceObserver((list) => {
             for (const entry of list.getEntries()) {
+              // Отправляем в Google Analytics
               if (typeof gtag !== "undefined") {
                 gtag("event", "performance", {
                   event_category: "Web Vitals",
                   event_label: entry.name,
                   value: Math.round(entry.duration),
                   non_interaction: true,
+                });
+              }
+              
+              // Отправляем в Яндекс.Метрику
+              if (typeof ym !== "undefined") {
+                ym(XXXXXXXX, 'reachGoal', 'performance_metric', {
+                  metric_name: entry.name,
+                  metric_value: Math.round(entry.duration)
                 });
               }
             }
@@ -282,12 +315,19 @@
           });
         }
 
+        // Отслеживаем просмотр страницы
         if (typeof gtag !== "undefined") {
           gtag("event", "page_view", {
             page_title: document.title,
             page_location: window.location.href,
             page_path: window.location.pathname,
-            send_to: "GA_MEASUREMENT_ID",
+          });
+        }
+        
+        // Отслеживаем в Яндекс.Метрике
+        if (typeof ym !== "undefined") {
+          ym(XXXXXXXX, 'hit', window.location.pathname, {
+            title: document.title
           });
         }
       });
@@ -298,17 +338,16 @@
           gtag("event", "exception", {
             description: e.message,
             fatal: false,
-            send_to: "GA_MEASUREMENT_ID",
           });
         }
-      });
-
-      window.addEventListener("offline", function () {
-        console.log("App is offline");
-      });
-
-      window.addEventListener("online", function () {
-        console.log("App is back online");
+        
+        if (typeof ym !== "undefined") {
+          ym(XXXXXXXX, 'reachGoal', 'javascript_error', {
+            error_message: e.message,
+            error_url: e.filename,
+            error_line: e.lineno
+          });
+        }
       });
     </script>
 

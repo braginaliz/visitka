@@ -37,7 +37,6 @@
   line-height: 1.8;
 }
 
-/* Experience Timeline */
 .experience-timeline {
   position: relative;
   max-width: 1200px;
@@ -55,7 +54,6 @@
   opacity: 0.3;
 }
 
-/* Experience Item */
 .experience-item {
   position: relative;
   margin-bottom: 60px;
@@ -96,7 +94,6 @@
   background: linear-gradient(to right, var(--primary-pink), var(--dark-pink));
 }
 
-/* Experience Header */
 .experience-header-row {
   display: flex;
   justify-content: space-between;
@@ -133,7 +130,6 @@
   white-space: nowrap;
 }
 
-/* Experience Description */
 .experience-description {
   margin-bottom: 20px;
 }
@@ -145,7 +141,7 @@
   margin: 0 0 12px 0;
 }
 
-/* Experience Highlights */
+
 .experience-highlights {
   list-style: none;
   padding: 0;
@@ -176,7 +172,6 @@
   justify-content: center;
 }
 
-/* Experience Tags */
 .experience-tags {
   display: flex;
   flex-wrap: wrap;
@@ -202,7 +197,6 @@
   transform: translateY(-2px);
 }
 
-/* Experience Timeline Dot */
 .experience-timeline-dot {
   position: absolute;
   left: 50%;
@@ -216,7 +210,6 @@
   box-shadow: 0 0 0 4px rgba(255, 107, 139, 0.1);
 }
 
-/* Experience Stats */
 .experience-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

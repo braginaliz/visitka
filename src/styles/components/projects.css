@@ -261,7 +261,6 @@
   flex-shrink: 0;
 }
 
-/* Статистика GitHub */
 .github-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -598,7 +597,6 @@
   height: 20px;
 }
 
-/* Lightbox для полноэкранного просмотра */
 .lightbox {
   position: fixed;
   top: 0;
