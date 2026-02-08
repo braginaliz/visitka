@@ -1,0 +1,343 @@
+/* src/styles/components/header.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 158, 181, 0.15);
+  padding: 20px 0;
+  animation: slideDown 0.6s ease-out;
+  transition: all var(--transition-fast);
+}
+
+.header.scrolled {
+  padding: 12px 0;
+  box-shadow: var(--shadow-soft);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Логотип */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+.logo-icon {
+  font-size: 32px;
+  color: var(--primary-pink);
+  transition: all var(--transition-fast);
+}
+
+.logo:hover .logo-icon {
+  transform: scale(1.1);
+}
+
+.logo-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+/* Навигация */
+.nav {
+  display: flex;
+  gap: 48px;
+  margin-left: 60px;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--darker-pink);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 0;
+  transition: all var(--transition-fast);
+  letter-spacing: 0.2px;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--primary-pink);
+  transition: width var(--transition-fast);
+  opacity: 0;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-pink);
+}
+
+.nav-indicator {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--primary-pink), var(--dark-pink));
+  transition: width var(--transition-fast);
+  border-radius: 1px;
+}
+
+.nav-link.active .nav-indicator {
+  width: 100%;
+}
+
+/* Контролы хедера */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: var(--primary-pink);
+  padding: 10px;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-pink);
+  width: 44px;
+  height: 44px;
+}
+
+.theme-toggle:hover {
+  background: var(--primary-pink);
+  color: var(--white);
+  transform: rotate(15deg) scale(1.1);
+  box-shadow: var(--shadow-soft);
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  border-left: 1px solid var(--light-pink);
+  padding-left: 28px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--light-pink), var(--white));
+  color: var(--primary-pink);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--light-medium-pink);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.social-link:hover::before {
+  opacity: 1;
+}
+
+.social-link svg {
+  position: relative;
+  z-index: 1;
+  transition: transform var(--transition-fast);
+}
+
+.social-link:hover svg {
+  transform: scale(1.2);
+  color: var(--white);
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hard);
+  border-color: transparent;
+}
+
+/* Адаптивность */
+@media (max-width: 1100px) {
+  .nav {
+    gap: 32px;
+    margin-left: 40px;
+  }
+  
+  .header-controls {
+    gap: 20px;
+  }
+  
+  .social-links {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-container {
+    padding: 0 30px;
+  }
+  
+  .nav {
+    display: none;
+  }
+  
+  .header-controls {
+    margin-left: auto;
+  }
+  
+  .social-links {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 0;
+  }
+  
+  .header.scrolled {
+    padding: 10px 0;
+  }
+  
+  .header-container {
+    padding: 0 20px;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+  }
+  
+  .logo-icon {
+    font-size: 28px;
+  }
+  
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 22px;
+  }
+  
+  .logo-icon {
+    font-size: 24px;
+  }
+  
+  .logo {
+    gap: 12px;
+  }
+}
+
+/* Тёмная тема */
+.App.dark .header {
+  background: rgba(26, 26, 46, 0.95);
+  border-bottom: 1px solid rgba(255, 107, 139, 0.15);
+}
+
+.App.dark .header.scrolled {
+  background: rgba(26, 26, 46, 0.98);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.App.dark .nav-link {
+  color: #e2e8f0;
+}
+
+.App.dark .nav-link:hover,
+.App.dark .nav-link.active {
+  color: var(--primary-pink);
+}
+
+.App.dark .theme-toggle {
+  background: #2d3748;
+  color: var(--primary-pink);
+}
+
+.App.dark .theme-toggle:hover {
+  background: var(--primary-pink);
+  color: var(--white);
+}
+
+.App.dark .social-link {
+  background: #2d3748;
+  border-color: #4a5568;
+  color: #a0aec0;
+}
+
+.App.dark .social-link:hover {
+  border-color: transparent;
+}
+
+.App.dark .social-links {
+  border-left-color: #4a5568;
+}
+
+/* Анимация */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* КОММЕНТАРИЙ: Все стили курсора должны быть в main.css для единообразия и избежания конфликтов */
+/* Удалены все cursor свойства из этого файла, так как они заданы глобально в main.css */

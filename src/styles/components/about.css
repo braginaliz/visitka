@@ -1,0 +1,288 @@
+/* src/styles/components/about.css */
+
+/* Контейнер */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+/* Левая колонка - Обо мне */
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.about-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-hard);
+  flex-shrink: 0;
+}
+
+.avatar-icon {
+  font-size: 60px;
+  color: var(--white);
+}
+
+.about-intro h3 {
+  font-size: 32px;
+  color: var(--pink-gray);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.about-subtitle {
+  color: var(--primary-pink);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Текст */
+.about-text {
+  margin-bottom: 40px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: var(--medium-pink);
+  font-size: 16px;
+}
+
+/* Философия */
+.about-philosophy {
+  background: linear-gradient(135deg, var(--light-pink), var(--white));
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 40px;
+  border: 1px solid var(--light-pink);
+}
+
+.about-philosophy h4 {
+  font-size: 20px;
+  color: var(--pink-gray);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-philosophy ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-philosophy li {
+  padding: 12px 0;
+  color: var(--medium-pink);
+  position: relative;
+  padding-left: 35px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.about-philosophy li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 24px;
+  height: 24px;
+  background: var(--primary-pink);
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Правая колонка - Факты */
+.about-facts h3 {
+  font-size: 28px;
+  color: var(--pink-gray);
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.fact-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--light-pink);
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hard);
+  border-color: var(--primary-pink);
+}
+
+.fact-icon {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: var(--primary-pink);
+}
+
+.fact-title {
+  font-size: 18px;
+  color: var(--pink-gray);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.fact-description {
+  color: var(--medium-pink);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Статистика */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background: linear-gradient(135deg, var(--light-pink), var(--white));
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid var(--light-pink);
+}
+
+.stat-item {
+  text-align: center;
+  padding: 15px;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-pink);
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--medium-pink);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Адаптивность */
+@media (max-width: 1100px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .about-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .avatar-icon {
+    font-size: 48px;
+  }
+  
+  .about-intro h3 {
+    font-size: 28px;
+  }
+  
+  .about-subtitle {
+    font-size: 16px;
+  }
+  
+  .about-text p {
+    font-size: 15px;
+  }
+  
+  .about-facts h3 {
+    font-size: 24px;
+  }
+  
+  .fact-card {
+    padding: 20px;
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+  
+  .stat-number {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .facts-grid {
+    gap: 15px;
+  }
+  
+  .about-philosophy {
+    padding: 20px;
+  }
+  
+  .about-philosophy li {
+    padding-left: 30px;
+    font-size: 14px;
+  }
+}
+
+/* Темная тема */
+.App.dark .about-philosophy,
+.App.dark .about-stats {
+  background: linear-gradient(135deg, #2d3748, #4a5568);
+  border-color: #4a5568;
+}
+
+.App.dark .fact-card {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.App.dark .about-text p,
+.App.dark .fact-description,
+.App.dark .about-philosophy li {
+  color: #a0aec0;
+}
+
+.App.dark .about-intro h3,
+.App.dark .about-facts h3,
+.App.dark .fact-title,
+.App.dark .about-philosophy h4 {
+  color: #e2e8f0;
+}
+
+.App.dark .about-subtitle,
+.App.dark .stat-label {
+  color: var(--secondary-pink);
+}

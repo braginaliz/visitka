@@ -1,0 +1,20 @@
+/* src/styles/utilities/theme.css */
+
+.dark-theme .header {
+  background: rgba(26, 26, 46, 0.9);
+  border-bottom-color: rgba(255, 158, 181, 0.1);
+}
+
+.dark-theme .nav-link {
+  color: var(--white);
+}
+
+.dark-theme .hero-description,
+.dark-theme .contact-value,
+.dark-theme .footer p {
+  color: #ccc;
+}
+
+.dark-theme .footer {
+  background: rgba(26, 26, 46, 0.8);
+}

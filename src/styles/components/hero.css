@@ -1,0 +1,626 @@
+/* Hero Section */
+.hero {
+  min-height: 95vh;
+  padding: 80px 0 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--light-pink) 0%, var(--white) 100%);
+  border-radius: 0 0 30px 30px;
+  margin: 0 20px 20px;
+}
+
+.hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Бейдж */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+  color: var(--white);
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(255, 107, 139, 0.2);
+}
+
+/* Заголовок */
+.hero-title {
+  margin-bottom: 25px;
+}
+
+.greeting {
+  display: block;
+  font-size: 17px;
+  color: var(--dark-pink);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.name {
+  display: block;
+  font-size: 52px;
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.title {
+  display: block;
+  font-size: 28px;
+  color: var(--pink-gray);
+  font-weight: 600;
+}
+
+/* Описание */
+.hero-description {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--medium-pink);
+  margin-bottom: 30px;
+  max-width: 480px;
+}
+
+/* Статистика */
+.hero-stats {
+  display: flex;
+  gap: 35px;
+  margin-bottom: 30px;
+}
+
+.stat {
+  text-align: left;
+  position: relative;
+  padding-right: 30px;
+}
+
+.stat:not(:last-child):after {
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 25px;
+  background: linear-gradient(to bottom, transparent, var(--primary-pink), transparent);
+  opacity: 0.3;
+}
+
+.stat-number {
+  display: block;
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--primary-pink);
+  line-height: 1;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 8px rgba(255, 107, 139, 0.2);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--medium-pink);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+
+/* Контакты */
+.hero-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(255, 107, 139, 0.1);
+  border: 1px solid rgba(255, 107, 139, 0.1);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 11px;
+  color: var(--light-medium-pink);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 3px;
+}
+
+.contact-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--pink-gray);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-value:hover {
+  color: var(--primary-pink);
+}
+
+/* Кнопки */
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+  color: var(--white);
+  box-shadow: 0 8px 25px rgba(255, 107, 139, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 107, 139, 0.35);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--pink-gray);
+  border: 2px solid var(--primary-pink);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 139, 0.25);
+}
+
+.hero-buttons .btn svg {
+  font-size: 16px;
+}
+
+/* Скролл вниз */
+.scroll-down {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-pink);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 0;
+}
+
+.scroll-down:hover {
+  color: var(--dark-pink);
+  transform: translateY(2px);
+}
+
+.scroll-down svg {
+  font-size: 16px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+/* Аватар */
+.hero-avatar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.avatar-container {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px; /* ← ОТСТУП МЕЖДУ АВАТАРОМ И ТЕХ-СТЭКОМ */
+}
+
+/* Круглый аватар с розовой рамкой */
+.avatar-circle {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 50px rgba(255, 107, 139, 0.25),
+    inset 0 0 0 6px var(--white);
+  border: 8px solid transparent;
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink)) border-box;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: all 0.4s ease;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Свечение вокруг аватара */
+.avatar-glow {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: radial-gradient(circle, rgba(255, 107, 139, 0.15) 0%, rgba(255, 107, 139, 0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+/* Эффекты при наведении */
+.avatar-wrapper:hover .avatar-circle {
+  transform: scale(1.05);
+  box-shadow: 
+    0 25px 60px rgba(255, 107, 139, 0.35),
+    inset 0 0 0 6px var(--white);
+}
+
+.avatar-wrapper:hover .avatar-image {
+  transform: scale(1.08);
+}
+
+.avatar-wrapper:hover .avatar-glow {
+  opacity: 1;
+  filter: blur(20px);
+  transform: scale(1.1);
+}
+
+/* Технологии */
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 10px; /* ← ДОПОЛНИТЕЛЬНЫЙ ВЕРХНИЙ ОТСТУП */
+}
+
+.tech-badge {
+  background: var(--white);
+  color: var(--dark-pink);
+  padding: 10px 20px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(255, 107, 139, 0.2);
+  border: 2px solid rgba(255, 107, 139, 0.15);
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+  color: var(--white);
+  border-color: transparent;
+  box-shadow: 0 12px 30px rgba(255, 107, 139, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .hero-container {
+    gap: 50px;
+  }
+  
+  .name {
+    font-size: 46px;
+  }
+  
+  .title {
+    font-size: 26px;
+  }
+  
+  .avatar-wrapper {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 35px; /* ← ОТСТУП ДЛЯ 1200px */
+  }
+  
+  .avatar-circle {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 50px;
+  }
+  
+  .hero-description {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+  
+  .stat {
+    text-align: center;
+    padding-right: 0;
+  }
+  
+  .stat:not(:last-child):after {
+    display: none;
+  }
+  
+  .hero-contacts {
+    align-items: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .avatar-wrapper {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 35px; /* ← ОТСТУП ДЛЯ 1100px */
+  }
+  
+  .avatar-circle {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .avatar-container {
+    max-width: 320px;
+  }
+  
+  .tech-stack {
+    margin-top: 5px; /* ← МЕНЬШИЙ ОТСТУП ДЛЯ 1100px */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 0 30px;
+    min-height: 90vh;
+    margin: 0 15px 15px;
+    border-radius: 0 0 24px 24px;
+  }
+  
+  .hero-container {
+    padding: 0 30px;
+    gap: 40px;
+  }
+  
+  .name {
+    font-size: 38px;
+  }
+  
+  .title {
+    font-size: 22px;
+  }
+  
+  .hero-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+  
+  .hero-stats {
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .stat-number {
+    font-size: 32px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 28px;
+  }
+  
+  .avatar-wrapper {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 30px; /* ← ОТСТУП ДЛЯ 768px */
+  }
+  
+  .avatar-circle {
+    width: 200px;
+    height: 200px;
+    border-width: 6px;
+  }
+  
+  .avatar-container {
+    max-width: 260px;
+  }
+  
+  .tech-stack {
+    margin-top: 5px;
+    gap: 10px;
+  }
+  
+  .tech-badge {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 0 20px;
+    gap: 35px;
+  }
+  
+  .name {
+    font-size: 32px;
+  }
+  
+  .greeting {
+    font-size: 15px;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .avatar-wrapper {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 25px; /* ← ОТСТУП ДЛЯ 480px */
+  }
+  
+  .avatar-circle {
+    width: 180px;
+    height: 180px;
+    border-width: 5px;
+  }
+  
+  .avatar-container {
+    max-width: 220px;
+  }
+  
+  .tech-stack {
+    gap: 8px;
+    margin-top: 5px;
+  }
+}
+
+/* Тёмная тема */
+.App.dark .hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.App.dark .contact-icon {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.App.dark .contact-value {
+  color: #e2e8f0;
+}
+
+.App.dark .contact-value:hover {
+  color: var(--primary-pink);
+}
+
+.App.dark .btn-secondary {
+  border-color: var(--primary-pink);
+  color: #e2e8f0;
+}
+
+.App.dark .tech-badge {
+  background: #2d3748;
+  color: #e2e8f0;
+  border-color: #4a5568;
+}
+
+.App.dark .tech-badge:hover {
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+  color: white;
+  border-color: transparent;
+}
+
+.App.dark .avatar-circle {
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 6px #4a5568;
+}
+
+.App.dark .avatar-wrapper:hover .avatar-circle {
+  box-shadow: 
+    0 25px 60px rgba(255, 107, 139, 0.3),
+    inset 0 0 0 6px #4a5568;
+}

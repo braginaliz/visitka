@@ -1,0 +1,122 @@
+:root {
+  /* Существующие переменные */
+  --primary-pink: #ff6b8b;     /* Основной розовый */
+  --dark-pink: #d43f5a;        /* Темно-розовый */
+  --secondary-pink: #ff8fab;   /* Вторичный розовый */
+  --light-pink: #ffcad4;       /* Светло-розовый */
+  --white: #ffffff;
+  --pudra: #f8e1e7;           /* Пудровый */
+  
+  /* Новые переменные для замены серых цветов */
+  --darker-pink: #8a2d42;      /* Очень темный розовый (вместо черного) */
+  --pink-gray: #a05267;        /* Розово-серый (вместо темно-серого) */
+  --medium-pink: #c97b8f;      /* Средний розовый (вместо #666) */
+  --light-medium-pink: #d9a3b0; /* Светло-розовый (вместо #999) */
+  
+  /* Другие переменные */
+  --transition-fast: 0.3s ease;
+  --shadow-soft: 0 5px 20px rgba(255, 107, 139, 0.1);
+  --shadow-hard: 0 10px 30px rgba(255, 107, 139, 0.2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--gray-dark);
+  background: linear-gradient(135deg, var(--light-pink) 0%, var(--white) 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--primary-pink);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-pink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-pink);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-pink);
+}
+
+/* ������� ��������� ��������� */
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* �������� ��������� ��� ������������� ��������� */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* ����� ��� ������ */
+.wave {
+  animation: wave 3s linear infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}
+
+/* ������� �������� */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

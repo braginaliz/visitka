@@ -1,0 +1,21 @@
+/* src/styles/components/footer.css */
+
+.footer {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 158, 181, 0.2);
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer p {
+  color: var(--medium-pink);
+  font-size: 14px;
+  margin: 5px 0;
+}
