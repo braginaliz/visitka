@@ -20,83 +20,6 @@ const Projects = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Функции для трекинга проектов
-  const trackProjectView = (projectId, projectName) => {
-    if (window.gtag) {
-      window.gtag('event', 'view_item', {
-        items: [{
-          id: projectId,
-          name: projectName,
-          category: 'portfolio_project'
-        }]
-      });
-    }
-    if (window.ym) {
-      window.ym(12345678, 'reachGoal', 'project_view', {
-        project_id: projectId,
-        project_name: projectName
-      });
-    }
-  };
-
-  const trackProjectClick = (projectId, projectName) => {
-    if (window.gtag) {
-      window.gtag('event', 'select_content', {
-        content_type: 'project',
-        item_id: projectId
-      });
-    }
-    if (window.ym) {
-      window.ym(12345678, 'reachGoal', 'project_click', {
-        project_id: projectId,
-        project_name: projectName
-      });
-    }
-  };
-
-  const trackGitHubClick = (projectId, projectName) => {
-    if (window.gtag) {
-      window.gtag('event', 'github_project_click', {
-        project_id: projectId,
-        project_name: projectName
-      });
-    }
-    if (window.ym) {
-      window.ym(12345678, 'reachGoal', 'github_project_click', {
-        project_id: projectId,
-        project_name: projectName
-      });
-    }
-  };
-
-  const trackDemoClick = (projectId, projectName) => {
-    if (window.gtag) {
-      window.gtag('event', 'demo_project_click', {
-        project_id: projectId,
-        project_name: projectName
-      });
-    }
-    if (window.ym) {
-      window.ym(12345678, 'reachGoal', 'demo_project_click', {
-        project_id: projectId,
-        project_name: projectName
-      });
-    }
-  };
-
-  const trackFilterChange = (filter) => {
-    if (window.gtag) {
-      window.gtag('event', 'project_filter', {
-        filter_type: filter
-      });
-    }
-    if (window.ym) {
-      window.ym(12345678, 'reachGoal', 'project_filter', {
-        filter_type: filter
-      });
-    }
-  };
-
   const projects = [
     {
       id: 1,
@@ -124,7 +47,126 @@ const Projects = () => {
       ],
       video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
-    // ... остальные проекты остаются без изменений
+    {
+      id: 2,
+      title: 'Mesto',
+      description: 'Социальная сеть для обмена фотографиями',
+      longDescription: 'Полноценное веб-приложение с авторизацией, загрузкой фотографий, лайками и комментариями. Проект включает валидацию форм, интеграцию с REST API и деплой на сервер.',
+      features: [
+        'Авторизация и регистрация пользователей',
+        'Загрузка и редактирование фотографий с превью',
+        'Система лайков и комментариев в реальном времени',
+        'Валидация всех форм с кастомными сообщениями',
+        'Адаптивный дизайн с мобильной версией',
+        'Оптимизация загрузки изображений'
+      ],
+      technologies: ['React', 'JavaScript', 'REST API', 'CSS3', 'Webpack', 'Babel', 'ES6+'],
+      github: 'https://github.com',
+      demo: 'https://mesto-project-demo.com',
+      status: 'Завершен',
+      category: 'fullstack',
+      color: '#4ECDC4',
+      images: [
+        'https://images.unsplash.com/photo-1529612700005-e35377bf1415?w=1200&q=80',
+        'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&q=80'
+      ]
+    },
+    {
+      id: 3,
+      title: 'Оно тебе надо',
+      description: 'Лендинг аукционного дома с анимациями',
+      longDescription: 'Адаптивный одностраничный сайт для аукционного дома с использованием современных технологий верстки. Проект включает сложные анимации и параллакс эффекты.',
+      features: [
+        'Адаптивная верстка с mobile-first подходом',
+        'Сложные CSS-анимации и переходы',
+        'Параллакс эффекты при скролле',
+        'Интерактивные элементы с hover-эффектами',
+        'Семантическая разметка для SEO',
+        'Оптимизация изображений и шрифтов'
+      ],
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Figma', 'Sass', 'BEM'],
+      github: 'https://github.com/braginaliz/ono-tebe-nado.git',
+      demo: 'https://auction-house-demo.com',
+      status: 'Завершен',
+      category: 'frontend',
+      color: '#45B7D1',
+      images: [
+        'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80',
+        'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80'
+      ]
+    },
+    {
+      id: 4,
+      title: 'WEB-ларёк',
+      description: 'Интернет-магазин для веб-разработчиков',
+      longDescription: 'MVP архитектура интернет-магазина с каталогом товаров, корзиной и оформлением заказа. Проект реализован с использованием TypeScript и паттерна MVC.',
+      features: [
+        'Каталог товаров с фильтрацией и сортировкой',
+        'Корзина покупок с localStorage',
+        'Оформление заказа в 2 шага с валидацией',
+        'Поиск товаров с автодополнением',
+        'Архитектура MVC/MVVM с TypeScript',
+        'Модульная структура проекта'
+      ],
+      technologies: ['TypeScript', 'MVC', 'REST API', 'HTML5', 'CSS3', 'Webpack', 'Jest'],
+      github: 'https://github.com',
+      demo: 'https://web-market-demo.com',
+      status: 'Завершен',
+      category: 'frontend',
+      color: '#96CEB4',
+      images: [
+        'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80',
+        'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80'
+      ]
+    },
+    {
+      id: 5,
+      title: 'SkillSwap Platform',
+      description: 'Платформа для обмена навыками',
+      longDescription: 'Fullstack приложение для обмена навыками между пользователями с системой заявок, чатом и WebSocket уведомлениями. Бэкенд на NestJS с PostgreSQL, фронтенд на React.',
+      features: [
+        'JWT аутентификация с Access/Refresh токенами',
+        'Система заявок на обмен навыками',
+        'WebSocket чат в реальном времени',
+        'Уведомления и оповещения',
+        'CRUD операции с валидацией',
+        'Поиск с пагинацией и фильтрацией'
+      ],
+      technologies: ['NestJS', 'TypeORM', 'PostgreSQL', 'WebSocket', 'React', 'Docker', 'Redis'],
+      github: 'https://github.com',
+      demo: 'https://skillswap-demo.com',
+      status: 'В разработке',
+      category: 'fullstack',
+      color: '#FFB347',
+      images: [
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80',
+        'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80'
+      ]
+    },
+    {
+      id: 6,
+      title: 'Travel Planner App',
+      description: 'Мобильное приложение для планирования путешествий',
+      longDescription: 'Кроссплатформенное приложение на React Native для планирования маршрутов, бронирования отелей и отслеживания расходов в путешествиях.',
+      features: [
+        'Интерактивная карта с маршрутами и POI',
+        'Интеграция с сервисами бронирования',
+        'Трекер расходов с категориями',
+        'Оффлайн режим с синхронизацией',
+        'Push-уведомления и напоминания',
+        'Мультиязычная поддержка'
+      ],
+      technologies: ['React Native', 'Firebase', 'Google Maps API', 'Redux', 'TypeScript', 'Expo'],
+      github: 'https://github.com',
+      demo: 'https://travelapp-demo.com',
+      status: 'Завершен',
+      category: 'mobile',
+      color: '#6A5ACD',
+      images: [
+        'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=80',
+        'https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=1200&q=80'
+      ]
+    }
   ];
 
   const filteredProjects = filter === 'all' 
@@ -134,8 +176,6 @@ const Projects = () => {
   const openProjectModal = (project) => {
     setSelectedProject(project);
     document.body.style.overflow = 'hidden';
-    trackProjectView(project.id, project.title);
-    trackProjectClick(project.id, project.title);
   };
 
   const closeProjectModal = () => {
@@ -164,7 +204,6 @@ const Projects = () => {
     );
   };
 
-  // SVG иконки для иконок категорий вынести нафиг
   const CategoryIcon = ({ category, color }) => {
     const svgIcons = {
       fullstack: (
@@ -189,7 +228,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="projects-section"> {/* ИЗМЕНЕНИЕ ЗДЕСЬ */}
       <div className="content-wrapper">
         <motion.h2 
           className="section-title"
@@ -213,10 +252,7 @@ const Projects = () => {
         <div className="project-filters">
           <button
             className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
-            onClick={() => {
-              setFilter('all');
-              trackFilterChange('all');
-            }}
+            onClick={() => setFilter('all')}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
@@ -225,10 +261,7 @@ const Projects = () => {
           </button>
           <button
             className={`filter-btn ${filter === 'fullstack' ? 'active' : ''}`}
-            onClick={() => {
-              setFilter('fullstack');
-              trackFilterChange('fullstack');
-            }}
+            onClick={() => setFilter('fullstack')}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
@@ -237,10 +270,7 @@ const Projects = () => {
           </button>
           <button
             className={`filter-btn ${filter === 'frontend' ? 'active' : ''}`}
-            onClick={() => {
-              setFilter('frontend');
-              trackFilterChange('frontend');
-            }}
+            onClick={() => setFilter('frontend')}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 18l-6-6 6-6v12zM18 6v12"/>
@@ -249,10 +279,7 @@ const Projects = () => {
           </button>
           <button
             className={`filter-btn ${filter === 'mobile' ? 'active' : ''}`}
-            onClick={() => {
-              setFilter('mobile');
-              trackFilterChange('mobile');
-            }}
+            onClick={() => setFilter('mobile')}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
@@ -318,10 +345,7 @@ const Projects = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="project-link-btn"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      trackGitHubClick(project.id, project.title);
-                    }}
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -333,10 +357,7 @@ const Projects = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="project-link-btn"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      trackDemoClick(project.id, project.title);
-                    }}
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6m4-3h6v6m-11 5L21 3"/>
@@ -387,7 +408,6 @@ const Projects = () => {
         </motion.div>
       </div>
 
-      {/* Модальное окно проекта */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div
@@ -496,7 +516,6 @@ const Projects = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="modal-link"
-                  onClick={() => trackGitHubClick(selectedProject.id, selectedProject.title)}
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -508,7 +527,6 @@ const Projects = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="modal-link"
-                  onClick={() => trackDemoClick(selectedProject.id, selectedProject.title)}
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6m4-3h6v6m-11 5L21 3"/>
@@ -521,7 +539,6 @@ const Projects = () => {
         )}
       </AnimatePresence>
 
-      {/* Лайтбокс для изображений */}
       <AnimatePresence>
         {lightboxOpen && selectedProject && (
           <motion.div
