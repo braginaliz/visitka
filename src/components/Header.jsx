@@ -58,7 +58,7 @@ const Header = ({ isDark, toggleTheme }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Закрытие меню при нажатии Escape
+
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === 'Escape') {
@@ -70,7 +70,6 @@ const Header = ({ isDark, toggleTheme }) => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
 
-  // Закрытие меню при скролле на мобильных
   useEffect(() => {
     const handleScrollCloseMenu = () => {
       if (isMobileMenuOpen) {
@@ -90,7 +89,7 @@ const Header = ({ isDark, toggleTheme }) => {
         block: 'start'
       });
     }
-    setIsMobileMenuOpen(false); // Закрываем меню после клика
+    setIsMobileMenuOpen(false);
   };
 
   const toggleMobileMenu = () => {
@@ -226,7 +225,7 @@ const Header = ({ isDark, toggleTheme }) => {
                 ))}
               </motion.nav>
 
-              {/* Социальные ссылки в мобильном меню */}
+              {/* Социальные ссылки в мобильном меню! Добавить все социалки */}
               <motion.div 
                 className="mobile-social-links"
                 initial={{ opacity: 0 }}

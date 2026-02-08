@@ -39,27 +39,7 @@
   .about-stats {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* УБИРАЕМ эти стили - они конфликтуют */
-  /*
-  .experience-timeline:before {
-    left: 30px;
-  }
-  
-  .experience-item {
-    flex-direction: row !important;
-    margin-left: 50px;
-  }
-  
-  .experience-item-content {
-    width: calc(100% - 70px);
-    margin: 0 !important;
-  }
-  
-  .experience-timeline-dot {
-    left: 30px;
-  }
-  */
+
   
   .experience-stats {
     grid-template-columns: repeat(2, 1fr);
@@ -137,26 +117,26 @@
   
   /* ИСПРАВЛЕННЫЕ СТИЛИ ДЛЯ МОБИЛЬНЫХ */
   .experience-timeline:before {
-    display: none; /* Убираем линию на мобильных */
+    display: none; 
   }
   
   .experience-item {
-    flex-direction: column !important; /* Всегда колонка */
-    margin-left: 0 !important; /* Убираем отступ */
-    padding-left: 0 !important; /* Убираем отступ */
-    align-items: center; /* Центрируем */
+    flex-direction: column !important; 
+    margin-left: 0 !important; 
+    padding-left: 0 !important; 
+    align-items: center;
     width: 100%;
   }
   
   .experience-item-content {
-    width: 100% !important; /* Занимаем всю ширину */
+    width: 100% !important; 
     max-width: 100%;
-    margin: 0 auto !important; /* Центрируем */
+    margin: 0 auto !important;
     padding: 25px 20px;
   }
   
   .experience-timeline-dot {
-    display: none; /* Убираем точки на мобильных */
+    display: none; 
   }
   
   .experience-header-row {
@@ -166,7 +146,7 @@
   
   .experience-period {
     align-self: flex-start;
-    white-space: normal; /* Разрешаем перенос текста */
+    white-space: normal; 
     word-break: break-word;
     max-width: 100%;
   }

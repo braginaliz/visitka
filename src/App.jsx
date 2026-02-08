@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSmileBeam, FaPaperPlane } from 'react-icons/fa';
+import { FaSmileBeam, FaPaperPlane, FaSearch, FaChartLine } from 'react-icons/fa';
 
-// Компоненты
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+// Ленивая загрузка компонентов для производительности 
+const Header = lazy(() => import('./components/Header'));
+const Hero = lazy(() => import('./components/Hero'));
+const About = lazy(() => import('./components/About'));
+const Experience = lazy(() => import('./components/Experience'));
+const Skills = lazy(() => import('./components/Skills'));
+const Projects = lazy(() => import('./components/Projects'));
+const Contact = lazy(() => import('./components/Contact'));
 
-// Стили
 import './styles/main.css';
 import './styles/components/header.css';
 import './styles/components/hero.css';
@@ -79,7 +78,7 @@ const FloatingShapes = () => {
   );
 };
 
-// Основной компонент App
+// App
 function App() {
   const [isDark, setIsDark] = useState(false);
   const [isLoading, setIsLoading] = useState(true);

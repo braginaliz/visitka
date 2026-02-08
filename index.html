@@ -1,19 +1,442 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="ru-RU" itemscope itemtype="https://schema.org/WebPage">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Брагина Елизавета | Fullstack Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+
+    <!-- SEO шечка -->
+    <title>Брагина Елизавета | Fullstack-разработчик</title>
+    <meta
+      name="description"
+      content="Fullstack-разработчик с 2.5+ годами опыта в JavaScript, WordPress, Bitrix. Специализация:  разработка сайтов под ключ, техническая SEO-оптимизация, веб-аналитика. Готова к работе в SEO Performance Agency!"
+    />
+    <meta
+      name="keywords"
+      content="Fullstack-разработчик, JavaScript-разработчик, WordPress-разработка, Bitrix-разработка, SEO-оптимизация, веб-разработка, техническая SEO, адаптивная верстка, веб-аналитика"
+    />
+    <meta name="author" content="Брагина Елизавета" />
+
+    <!-- Социальные сетки -->
+    <meta
+      property="og:title"
+      content="Брагина Елизавета | Fullstack-разработчик"
+    />
+    <meta
+      property="og:description"
+      content="Fullstack-разработчик с опытом SEO-оптимизации и разработки сайтов под ключ"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:url" content="https://braginaliz.github.io/visitka" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Брагина Елизавета | Fullstack-разработчик"
+    />
+    <meta
+      name="twitter:description"
+      content="Fullstack-разработчик с опытом SEO-оптимизации"
+    />
+    <meta name="twitter:image:alt" content="Портфолио Брагиной Елизаветы" />
+
+    <!-- Канноничный URL -->
+    <link rel="canonical" href="https://braginaliz.github.io/visitka" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Брагина Елизавета",
+        "givenName": "Елизавета",
+        "familyName": "Брагина",
+        "gender": "Female",
+        "jobTitle": "Fullstack-разработчик",
+        "skills": [
+          "PHP",
+          "JavaScript",
+          "WordPress",
+          "Bitrix",
+          "SEO-оптимизация",
+          "HTML5",
+          "CSS3",
+          "React",
+          "Vue.js",
+          "MySQL",
+          "Git",
+          "Веб-аналитика"
+        ],
+        "description": "Fullstack-разработчик с 2.5+ годами опыта в разработке и SEO-оптимизации сайтов",
+        "url": "https://braginaliz.github.io/visitka",
+        "sameAs": [
+          "https://github.com/braginaliz",
+          "https://linkedin.com/in/braginaliz"
+        ],
+        "image": "https://braginaliz.github.io/visitka/og-image.jpg",
+        "nationality": "Russian",
+        "birthPlace": {
+          "@type": "Place",
+          "name": "Москва, Россия"
+        }
+      }
+    </script>
+
+    <!-- Иконка с зайчиком -->
+    <!-- Нало ее отсюда убрать -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+      <circle cx='50' cy='50' r='48' fill='%23ff6b8b'/>
+      <!-- Rabbit body -->
+      <ellipse cx='50' cy='65' rx='25' ry='20' fill='white'/>
+      <!-- Rabbit head -->
+      <circle cx='50' cy='45' r='20' fill='white'/>
+      <!-- Ears -->
+      <ellipse cx='40' cy='30' rx='6' ry='12' fill='white'/>
+      <ellipse cx='60' cy='30' rx='6' ry='12' fill='white'/>
+      <!-- Inner ears -->
+      <ellipse cx='40' cy='32' rx='3' ry='8' fill='%23ffb6c1'/>
+      <ellipse cx='60' cy='32' rx='3' ry='8' fill='%23ffb6c1'/>
+      <!-- Eyes -->
+      <circle cx='45' cy='43' r='3.5' fill='%232d3748'/>
+      <circle cx='55' cy='43' r='3.5' fill='%232d3748'/>
+      <!-- Eye sparkle -->
+      <circle cx='44' cy='42' r='1' fill='white'/>
+      <circle cx='54' cy='42' r='1' fill='white'/>
+      <!-- Nose -->
+      <circle cx='50' cy='50' r='2.5' fill='%23ff8fab'/>
+      <!-- Mouth -->
+      <path d='M 46 54 Q 50 58 54 54' stroke='%232d3748' stroke-width='1.5' fill='none' stroke-linecap='round'/>
+      <!-- Whiskers -->
+      <line x1='42' y1='50' x2='32' y2='48' stroke='%232d3748' stroke-width='1'/>
+      <line x1='42' y1='53' x2='32' y2='53' stroke='%232d3748' stroke-width='1'/>
+      <line x1='58' y1='50' x2='68' y2='48' stroke='%232d3748' stroke-width='1'/>
+      <line x1='58' y1='53' x2='68' y2='53' stroke='%232d3748' stroke-width='1'/>
+    </svg>"
+    />
+
+    <!-- PNG fallbacks -->
+    <link
+      rel="alternate icon"
+      type="image/png"
+      href="/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#ff6b8b" />
+
+    <!-- Префэтч -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Прелоад -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@400;500;600&display=swap"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript
+      ><link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    /></noscript>
+
+    <!-- Критический прелоад css -->
+    <link rel="preload" href="/src/main.css" as="style" />
+    <link rel="preload" href="/src/components/Header/header.css" as="style" />
+
+    <!-- Robots Meta -->
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:150, max-image-preview:large, max-video-preview:-1"
+    />
+
+    <!-- Additional SEO Meta -->
+    <meta name="rating" content="General" />
+    <meta name="language" content="Russian" />
+    <meta name="geo.region" content="RU-MOW" />
+    <meta name="geo.placename" content="Москва" />
+    <meta name="geo.position" content="55.755826;37.6173" />
+    <meta name="ICBM" content="55.755826, 37.6173" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+
+    <!-- Mobile Specific -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="Портфолио Брагиной Елизаветы"
+    />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preload critical scripts -->
+    <link
+      rel="preload"
+      href="/src/main.jsx"
+      as="script"
+      crossorigin="anonymous"
+    />
+
+    <!-- Безопасность -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="camera=(), microphone=(), geolocation=()"
+    />
   </head>
+
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <a
+      href="#main-content"
+      class="skip-to-content"
+      aria-label="Перейти к основному контенту"
+      style="
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #ff6b8b;
+        color: white;
+        padding: 8px 16px;
+        z-index: 9999;
+        text-decoration: none;
+        transition: top 0.3s;
+      "
+      >Перейти к контенту</a
+    >
+    <script>
+      document
+        .querySelector(".skip-to-content")
+        .addEventListener("focus", function () {
+          this.style.top = "0";
+        });
+    </script>
+
+    <div
+      id="root"
+      role="main"
+      aria-label="Портфолио Брагиной Елизаветы - Fullstack-разработчик"
+    ></div>
+
+    <!--  Загрузка скрипта асинхронно -->
+    <script
+      type="module"
+      src="/src/main.jsx"
+      async
+      defer
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        if ("PerformanceObserver" in window) {
+          const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+              if (typeof gtag !== "undefined") {
+                gtag("event", "performance", {
+                  event_category: "Web Vitals",
+                  event_label: entry.name,
+                  value: Math.round(entry.duration),
+                  non_interaction: true,
+                });
+              }
+            }
+          });
+          observer.observe({
+            entryTypes: [
+              "paint",
+              "largest-contentful-paint",
+              "layout-shift",
+              "first-input",
+            ],
+          });
+        }
+
+        if (typeof gtag !== "undefined") {
+          gtag("event", "page_view", {
+            page_title: document.title,
+            page_location: window.location.href,
+            page_path: window.location.pathname,
+            send_to: "GA_MEASUREMENT_ID",
+          });
+        }
+      });
+
+      // Отслеживание ошибок
+      window.addEventListener("error", function (e) {
+        if (typeof gtag !== "undefined") {
+          gtag("event", "exception", {
+            description: e.message,
+            fatal: false,
+            send_to: "GA_MEASUREMENT_ID",
+          });
+        }
+      });
+
+      window.addEventListener("offline", function () {
+        console.log("App is offline");
+      });
+
+      window.addEventListener("online", function () {
+        console.log("App is back online");
+      });
+    </script>
+
+    <!-- Schema.org markup for Job Posting -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "JobPosting",
+        "title": "Веб-разработчик | Middle",
+        "description": "Компания ищет веб-разработчика для создания и поддержки веб-проектов. Требования: знание современных технологий веб-разработки, опыт работы с frontend и backend стеком.",
+        "hiringOrganization": {
+          "@type": "Organization",
+          "name": "Название компании",
+          "sameAs": "https://example.com",
+          "logo": "https://example.com/logo.png"
+        },
+        "industry": "Веб-разработка, IT",
+        "employmentType": "FULL_TIME",
+        "workHours": "40 часов в неделю",
+        "salaryCurrency": "RUB",
+        "baseSalary": {
+          "@type": "MonetaryAmount",
+          "currency": "RUB",
+          "value": {
+            "@type": "QuantitativeValue",
+            "minValue": 80000,
+            "maxValue": 160000,
+            "unitText": "MONTH"
+          }
+        },
+        "jobLocation": [
+          {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Москва",
+              "addressRegion": "Москва",
+              "addressCountry": "RU"
+            }
+          },
+          {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Санкт-Петербург",
+              "addressRegion": "Ленинградская область",
+              "addressCountry": "RU"
+            }
+          }
+        ],
+        "jobLocationType": "TELECOMMUTE",
+        "datePosted": "2026-02-08",
+        "validThrough": "2026-03-31",
+        "experienceRequirements": "От 1 года",
+        "skills": "JavaScript, HTML, CSS, React/Vue, Node.js/PHP/Python, Git, Базы данных",
+        "responsibilities": "Разработка новых функциональных возможностей, рефакторинг и оптимизация существующего кода, участие в код-ревью, взаимодействие с командой",
+        "qualifications": "Опыт коммерческой разработки, понимание принципов ООП, знание паттернов проектирования",
+        "educationRequirements": "Высшее или неоконченное высшее техническое образование",
+        "benefits": [
+          "Гибкий график",
+          "Удалённая работа",
+          "Медицинская страховка",
+          "Официальное оформление",
+          "Премии по результатам работы"
+        ],
+        "applicationContact": {
+          "@type": "ContactPoint",
+          "email": "hr@example.com",
+          "contactType": "HR"
+        }
+      }
+    </script>
+
+    <!-- Noscript fallback -->
+    <noscript>
+      <div
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: #ff6b8b;
+          color: white;
+          padding: 15px;
+          text-align: center;
+          z-index: 9999;
+        "
+      >
+        <strong>Внимание:</strong> JavaScript отключен. Для корректной работы
+        портфолио, пожалуйста, включите JavaScript в настройках браузера.
+      </div>
+    </noscript>
+
+    <!-- Hidden accessibility text -->
+    <div hidden aria-hidden="true">
+      <h1 id="page-title">
+        Портфолио Брагиной Елизаветы - Fullstack-разработчик
+      </h1>
+      <p id="page-description">
+        Портфолио Fullstack-разработчика с опытом в JavaScript, WordPress,
+        Bitrix и SEO-оптимизации. Специализация: разработка сайтов под ключ,
+        техническая SEO-оптимизация, веб-аналитика.
+      </p>
+      <span id="current-year">2026</span>
+    </div>
+
+    <!-- Ленивая загрузка -->
+    <style>
+      .fonts-loaded body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+    </style>
+    <script>
+      if ("fonts" in document) {
+        document.fonts.load("1em Inter").then(function () {
+          document.documentElement.classList.add("fonts-loaded");
+        });
+      }
+    </script>
   </body>
 </html>

@@ -204,7 +204,7 @@ const Projects = () => {
     );
   };
 
-  // SVG иконки для иконок категорий
+  // SVG иконки для иконок категорий вынести нафиг
   const CategoryIcon = ({ category, color }) => {
     const svgIcons = {
       fullstack: (

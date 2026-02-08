@@ -3,13 +3,12 @@ import { FaArrowDown, FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
-  // Массив технологий для бейджей
+
   const techStack = ['React', 'Node.js', 'TypeScript', 'MongoDB'];
 
-  // URL вашего фото
+  //  Что-то сделать с лицом (попроще)
   const avatarUrl = "https://i.ibb.co/hJ6qZSDF/photo-5208418342518068321-y.jpg";
 
-  // Функция для плавного скролла к секции
   const scrollToNextSection = (e) => {
     e.preventDefault();
     const nextSection = document.querySelector('#experience') || document.querySelector('#about');
