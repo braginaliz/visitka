@@ -233,7 +233,7 @@ const Header = ({ isDark, toggleTheme }) => {
                 transition={{ delay: 0.3 }}
               >
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/braginaliz" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="mobile-social-link"
@@ -255,7 +255,7 @@ const Header = ({ isDark, toggleTheme }) => {
                   <FaLinkedin />
                 </a>
                 <a 
-                  href="https://t.me" 
+                  href="https://t.me/breadful_baby_s" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="mobile-social-link"
