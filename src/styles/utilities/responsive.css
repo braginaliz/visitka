@@ -40,6 +40,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
   
+  /* УБИРАЕМ эти стили - они конфликтуют */
+  /*
   .experience-timeline:before {
     left: 30px;
   }
@@ -57,6 +59,7 @@
   .experience-timeline-dot {
     left: 30px;
   }
+  */
   
   .experience-stats {
     grid-template-columns: repeat(2, 1fr);
@@ -132,6 +135,30 @@
     font-size: 36px;
   }
   
+  /* ИСПРАВЛЕННЫЕ СТИЛИ ДЛЯ МОБИЛЬНЫХ */
+  .experience-timeline:before {
+    display: none; /* Убираем линию на мобильных */
+  }
+  
+  .experience-item {
+    flex-direction: column !important; /* Всегда колонка */
+    margin-left: 0 !important; /* Убираем отступ */
+    padding-left: 0 !important; /* Убираем отступ */
+    align-items: center; /* Центрируем */
+    width: 100%;
+  }
+  
+  .experience-item-content {
+    width: 100% !important; /* Занимаем всю ширину */
+    max-width: 100%;
+    margin: 0 auto !important; /* Центрируем */
+    padding: 25px 20px;
+  }
+  
+  .experience-timeline-dot {
+    display: none; /* Убираем точки на мобильных */
+  }
+  
   .experience-header-row {
     flex-direction: column;
     gap: 12px;
@@ -139,10 +166,9 @@
   
   .experience-period {
     align-self: flex-start;
-  }
-  
-  .experience-item-content {
-    padding: 25px;
+    white-space: normal; /* Разрешаем перенос текста */
+    word-break: break-word;
+    max-width: 100%;
   }
   
   .experience-role-title {
@@ -154,7 +180,9 @@
   }
   
   .experience-stats {
-    padding: 30px;
+    padding: 30px 20px;
+    margin: 30px 0;
+    max-width: 100%;
   }
   
   .skills-title {
@@ -255,5 +283,78 @@
   
   .social-grid {
     grid-template-columns: 1fr;
+  }
+  
+  /* ДОПОЛНИТЕЛЬНЫЕ ИСПРАВЛЕНИЯ ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ */
+  .experience-section {
+    padding: 40px 10px !important;
+  }
+  
+  .experience-item-content {
+    padding: 20px 15px !important;
+    border-radius: 12px;
+  }
+  
+  .experience-role-title {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  
+  .experience-company {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .experience-period {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-top: 5px;
+  }
+  
+  .experience-description p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .experience-highlights li {
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 8px 0 8px 26px;
+  }
+  
+  .experience-highlights li:before {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    top: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .experience-item-content {
+    padding: 18px 12px !important;
+  }
+  
+  .experience-role-title {
+    font-size: 17px;
+  }
+  
+  .experience-company {
+    font-size: 13px;
+  }
+  
+  .experience-period {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  
+  .experience-highlights li {
+    font-size: 12px;
+    padding: 6px 0 6px 24px;
+  }
+  
+  .experience-tag {
+    font-size: 10px;
+    padding: 4px 8px;
   }
 }
