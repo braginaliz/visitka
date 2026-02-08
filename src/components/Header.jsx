@@ -144,7 +144,7 @@ const Header = ({ isDark, toggleTheme }) => {
           {/* Социальные ссылки */}
           <div className="social-links desktop-social">
             <a 
-              href="https://github.com" 
+              href="https://github.com/braginaliz" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-link"
@@ -162,7 +162,7 @@ const Header = ({ isDark, toggleTheme }) => {
               <FaLinkedin />
             </a>
             <a 
-              href="https://t.me" 
+              href="https://t.me/breadful_baby_s" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-link"
