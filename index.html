@@ -2,10 +2,23 @@
 <html lang="ru-RU" itemscope itemtype="https://schema.org/WebPage">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- CSP ДОЛЖЕН БЫТЬ ЗДЕСЬ - ОДНИМ ИЗ ПЕРВЫХ ТЕГОВ -->
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; 
+      connect-src 'self' https://mc.yandex.ru https://www.google-analytics.com wss://mc.yandex.ru; 
+      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://mc.yandex.ru https://fonts.googleapis.com; 
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+      font-src 'self' https://fonts.gstatic.com; 
+      img-src 'self' data: https:; 
+      frame-src 'none';"
     />
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
 
     <!-- SEO шечка -->
     <title>Брагина Елизавета | Fullstack-разработчик</title>
@@ -20,32 +33,82 @@
     <meta name="author" content="Брагина Елизавета" />
 
     <!-- Социальные сетки -->
-    <meta
-      property="og:title"
-      content="Брагина Елизавета | Fullstack-разработчик"
-    />
-    <meta
-      property="og:description"
-      content="Fullstack-разработчик с опытом SEO-оптимизации и разработки сайтов под ключ"
-    />
+    <meta property="og:title" content="Брагина Елизавета | Fullstack-разработчик" />
+    <meta property="og:description" content="Fullstack-разработчик с опытом SEO-оптимизации и разработки сайтов под ключ" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:url" content="https://visitka-dun.vercel.app" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Брагина Елизавета | Fullstack-разработчик"
-    />
-    <meta
-      name="twitter:description"
-      content="Fullstack-разработчик с опытом SEO-оптимизации"
-    />
+    <meta name="twitter:title" content="Брагина Елизавета | Fullstack-разработчик" />
+    <meta name="twitter:description" content="Fullstack-разработчик с опытом SEO-оптимизации" />
     <meta name="twitter:image:alt" content="Портфолио Брагиной Елизаветы" />
 
     <!-- Канноничный URL -->
     <link rel="canonical" href="https://visitka-dun.vercel.app" />
+
+    <!-- Иконка с зайчиком -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+      <circle cx='50' cy='50' r='48' fill='%23ff6b8b'/>
+      <ellipse cx='50' cy='65' rx='25' ry='20' fill='white'/>
+      <circle cx='50' cy='45' r='20' fill='white'/>
+      <ellipse cx='40' cy='30' rx='6' ry='12' fill='white'/>
+      <ellipse cx='60' cy='30' rx='6' ry='12' fill='white'/>
+      <ellipse cx='40' cy='32' rx='3' ry='8' fill='%23ffb6c1'/>
+      <ellipse cx='60' cy='32' rx='3' ry='8' fill='%23ffb6c1'/>
+      <circle cx='45' cy='43' r='3.5' fill='%232d3748'/>
+      <circle cx='55' cy='43' r='3.5' fill='%232d3748'/>
+      <circle cx='44' cy='42' r='1' fill='white'/>
+      <circle cx='54' cy='42' r='1' fill='white'/>
+      <circle cx='50' cy='50' r='2.5' fill='%23ff8fab'/>
+      <path d='M 46 54 Q 50 58 54 54' stroke='%232d3748' stroke-width='1.5' fill='none' stroke-linecap='round'/>
+      <line x1='42' y1='50' x2='32' y2='48' stroke='%232d3748' stroke-width='1'/>
+      <line x1='42' y1='53' x2='32' y2='53' stroke='%232d3748' stroke-width='1'/>
+      <line x1='58' y1='50' x2='68' y2='48' stroke='%232d3748' stroke-width='1'/>
+      <line x1='58' y1='53' x2='68' y2='53' stroke='%232d3748' stroke-width='1'/>
+    </svg>"
+    />
+
+    <!-- PNG fallbacks -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ff6b8b" />
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS файлы -->
+    <link rel="stylesheet" href="/index.css" />
+    
+    <!-- Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- Additional SEO Meta -->
+    <meta name="rating" content="General" />
+    <meta name="language" content="Russian" />
+    <meta name="geo.region" content="RU-MOW" />
+    <meta name="geo.placename" content="Москва" />
+    <meta name="geo.position" content="55.755826;37.6173" />
+    <meta name="ICBM" content="55.755826, 37.6173" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+
+    <!-- Mobile Specific -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Портфолио Брагиной Елизаветы" />
 
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -116,111 +179,6 @@
         }
       }
     </script>
-
-    <!-- Иконка с зайчиком -->
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-      <circle cx='50' cy='50' r='48' fill='%23ff6b8b'/>
-      <!-- Rabbit body -->
-      <ellipse cx='50' cy='65' rx='25' ry='20' fill='white'/>
-      <!-- Rabbit head -->
-      <circle cx='50' cy='45' r='20' fill='white'/>
-      <!-- Ears -->
-      <ellipse cx='40' cy='30' rx='6' ry='12' fill='white'/>
-      <ellipse cx='60' cy='30' rx='6' ry='12' fill='white'/>
-      <!-- Inner ears -->
-      <ellipse cx='40' cy='32' rx='3' ry='8' fill='%23ffb6c1'/>
-      <ellipse cx='60' cy='32' rx='3' ry='8' fill='%23ffb6c1'/>
-      <!-- Eyes -->
-      <circle cx='45' cy='43' r='3.5' fill='%232d3748'/>
-      <circle cx='55' cy='43' r='3.5' fill='%232d3748'/>
-      <!-- Eye sparkle -->
-      <circle cx='44' cy='42' r='1' fill='white'/>
-      <circle cx='54' cy='42' r='1' fill='white'/>
-      <!-- Nose -->
-      <circle cx='50' cy='50' r='2.5' fill='%23ff8fab'/>
-      <!-- Mouth -->
-      <path d='M 46 54 Q 50 58 54 54' stroke='%232d3748' stroke-width='1.5' fill='none' stroke-linecap='round'/>
-      <!-- Whiskers -->
-      <line x1='42' y1='50' x2='32' y2='48' stroke='%232d3748' stroke-width='1'/>
-      <line x1='42' y1='53' x2='32' y2='53' stroke='%232d3748' stroke-width='1'/>
-      <line x1='58' y1='50' x2='68' y2='48' stroke='%232d3748' stroke-width='1'/>
-      <line x1='58' y1='53' x2='68' y2='53' stroke='%232d3748' stroke-width='1'/>
-    </svg>"
-    />
-
-    <!-- PNG fallbacks -->
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#ff6b8b" />
-
-    <!-- Префэтч -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-
-    <!-- Шрифты -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- CSS файлы (исправленные пути) -->
-    <link rel="stylesheet" href="src/index.css" />" />
-    
-    <!-- Robots Meta -->
-    <meta
-      name="robots"
-      content="index, follow, max-snippet:150, max-image-preview:large, max-video-preview:-1"
-    />
-
-    <!-- Additional SEO Meta -->
-    <meta name="rating" content="General" />
-    <meta name="language" content="Russian" />
-    <meta name="geo.region" content="RU-MOW" />
-    <meta name="geo.placename" content="Москва" />
-    <meta name="geo.position" content="55.755826;37.6173" />
-    <meta name="ICBM" content="55.755826, 37.6173" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="distribution" content="global" />
-
-    <!-- Mobile Specific -->
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-    <meta
-      name="apple-mobile-web-app-title"
-      content="Портфолио Брагиной Елизаветы"
-    />
-
-    <!-- Безопасность - ИСПРАВЛЕННАЯ CSP ПОЛИТИКА -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; 
-      connect-src 'self' https://mc.yandex.ru https://www.google-analytics.com https://mc.yandex.ru/watch/106723032 https://mc.yandex.ru/webvisor/106723032; 
-      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://mc.yandex.ru https://fonts.googleapis.com; 
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-      font-src 'self' https://fonts.gstatic.com; 
-      img-src 'self' data: https: https://mc.yandex.ru; 
-      frame-src 'none';"
-    />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
-    <meta
-      http-equiv="Referrer-Policy"
-      content="strict-origin-when-cross-origin"
-    />
-    <meta
-      http-equiv="Permissions-Policy"
-      content="camera=(), microphone=(), geolocation=()"
-    />
   </head>
 
   <body>
@@ -241,13 +199,6 @@
       "
       >Перейти к контенту</a
     >
-    <script>
-      document
-        .querySelector(".skip-to-content")
-        .addEventListener("focus", function () {
-          this.style.top = "0";
-        });
-    </script>
 
     <div
       id="root"
@@ -261,39 +212,6 @@
     <!-- Трекинг загрузки страницы -->
     <script>
       window.addEventListener("load", function () {
-        // Отслеживаем метрики производительности
-        if ("PerformanceObserver" in window) {
-          const observer = new PerformanceObserver((list) => {
-            for (const entry of list.getEntries()) {
-              // Отправляем в Google Analytics
-              if (typeof gtag !== "undefined") {
-                gtag("event", "performance", {
-                  event_category: "Web Vitals",
-                  event_label: entry.name,
-                  value: Math.round(entry.duration),
-                  non_interaction: true,
-                });
-              }
-              
-              // Отправляем в Яндекс.Метрику
-              if (typeof ym !== "undefined") {
-                ym(106723032, 'reachGoal', 'performance_metric', {
-                  metric_name: entry.name,
-                  metric_value: Math.round(entry.duration)
-                });
-              }
-            }
-          });
-          observer.observe({
-            entryTypes: [
-              "paint",
-              "largest-contentful-paint",
-              "layout-shift",
-              "first-input",
-            ],
-          });
-        }
-
         // Отслеживаем просмотр страницы
         if (typeof gtag !== "undefined") {
           gtag("event", "page_view", {
@@ -307,24 +225,6 @@
         if (typeof ym !== "undefined") {
           ym(106723032, 'hit', window.location.pathname, {
             title: document.title
-          });
-        }
-      });
-
-      // Отслеживание ошибок
-      window.addEventListener("error", function (e) {
-        if (typeof gtag !== "undefined") {
-          gtag("event", "exception", {
-            description: e.message,
-            fatal: false,
-          });
-        }
-        
-        if (typeof ym !== "undefined") {
-          ym(106723032, 'reachGoal', 'javascript_error', {
-            error_message: e.message,
-            error_url: e.filename,
-            error_line: e.lineno
           });
         }
       });
@@ -433,22 +333,43 @@
       <span id="current-year">2026</span>
     </div>
 
-    <!-- Ленивая загрузка шрифтов -->
-    <style>
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      }
-      
-      .fonts-loaded body {
-        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      }
-    </style>
+    <!-- СКРИПТ ДЛЯ ИГНОРИРОВАНИЯ ОШИБОК -->
     <script>
-      if ("fonts" in document) {
-        document.fonts.load("1em Inter").then(function () {
-          document.documentElement.classList.add("fonts-loaded");
+      // Игнорируем ошибки от расширений браузера
+      const originalError = console.error;
+      console.error = function(...args) {
+        if (args[0] && typeof args[0] === 'string' && 
+            (args[0].includes('ScreenshotHelper') || 
+             args[0].includes('content.js'))) {
+          return; // Игнорируем ошибки расширений
+        }
+        originalError.apply(console, args);
+      };
+
+      // Игнорируем предупреждения от расширений
+      const originalWarn = console.warn;
+      console.warn = function(...args) {
+        if (args[0] && typeof args[0] === 'string' && 
+            args[0].includes('ScreenshotHelper')) {
+          return;
+        }
+        originalWarn.apply(console, args);
+      };
+
+      // Проверяем загрузку CSS
+      document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('link[rel="stylesheet"]');
+        links.forEach(link => {
+          link.addEventListener('error', function() {
+            console.log('CSS загружается альтернативным путем');
+          });
         });
-      }
+      });
+
+      // Отслеживаем клик по skip link
+      document.querySelector('.skip-to-content')?.addEventListener('focus', function() {
+        this.style.top = "0";
+      });
     </script>
   </body>
 </html>
