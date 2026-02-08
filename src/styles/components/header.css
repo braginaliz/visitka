@@ -341,3 +341,236 @@
 
 /* КОММЕНТАРИЙ: Все стили курсора должны быть в main.css для единообразия и избежания конфликтов */
 /* Удалены все cursor свойства из этого файла, так как они заданы глобально в main.css */
+/* Мобильное меню - кнопка */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--primary-pink);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+  z-index: 1001;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-toggle:hover {
+  background: var(--light-pink);
+  transform: rotate(90deg);
+}
+
+/* Мобильное меню - оверлей */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 158, 181, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 20px;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  color: var(--darker-pink);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  transition: all var(--transition-fast);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-link:hover {
+  background: rgba(255, 107, 139, 0.1);
+  color: var(--primary-pink);
+  transform: translateX(5px);
+}
+
+.mobile-nav-link.active {
+  background: linear-gradient(135deg, 
+    rgba(255, 107, 139, 0.15), 
+    rgba(255, 107, 139, 0.05));
+  color: var(--primary-pink);
+  font-weight: 600;
+}
+
+.mobile-nav-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-pink);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* Социальные ссылки в мобильном меню */
+.mobile-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 158, 181, 0.1);
+}
+
+.mobile-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--light-pink), var(--white));
+  color: var(--primary-pink);
+  text-decoration: none;
+  font-size: 20px;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--light-medium-pink);
+}
+
+.mobile-social-link:hover {
+  background: var(--primary-pink);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Темная тема для мобильного меню */
+.App.dark .mobile-menu {
+  background: rgba(26, 26, 46, 0.98);
+  border-bottom: 1px solid rgba(255, 107, 139, 0.15);
+}
+
+.App.dark .mobile-nav-link {
+  color: #e2e8f0;
+}
+
+.App.dark .mobile-nav-link:hover {
+  background: rgba(255, 107, 139, 0.15);
+  color: var(--primary-pink);
+}
+
+.App.dark .mobile-nav-link.active {
+  background: rgba(255, 107, 139, 0.2);
+}
+
+.App.dark .mobile-social-link {
+  background: #2d3748;
+  border-color: #4a5568;
+  color: #a0aec0;
+}
+
+.App.dark .mobile-social-link:hover {
+  background: var(--primary-pink);
+  color: white;
+  border-color: transparent;
+}
+
+.App.dark .mobile-social-links {
+  border-top-color: #4a5568;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  /* Скрываем десктопные элементы */
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .desktop-social {
+    display: none !important;
+  }
+  
+  /* Показываем мобильные элементы */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+  
+  /* Адаптируем хедер */
+  .header-controls {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    top: 70px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-menu {
+    top: 65px;
+    padding: 15px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 15px;
+    padding: 12px 16px;
+  }
+  
+  .mobile-social-link {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+}
+
+/* Плавная анимация для иконки меню */
+.mobile-menu-toggle svg {
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-toggle:hover svg {
+  transform: rotate(180deg);
+}
+
+/* Анимация для пунктов меню */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav-link {
+  animation: slideIn 0.3s ease forwards;
+  animation-delay: calc(var(--item-index, 0) * 0.05s);
+}
