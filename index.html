@@ -298,7 +298,7 @@
               
               // Отправляем в Яндекс.Метрику
               if (typeof ym !== "undefined") {
-                ym(XXXXXXXX, 'reachGoal', 'performance_metric', {
+                ym(106723032, 'reachGoal', 'performance_metric', {
                   metric_name: entry.name,
                   metric_value: Math.round(entry.duration)
                 });
@@ -326,7 +326,7 @@
         
         // Отслеживаем в Яндекс.Метрике
         if (typeof ym !== "undefined") {
-          ym(XXXXXXXX, 'hit', window.location.pathname, {
+          ym(106723032, 'hit', window.location.pathname, {
             title: document.title
           });
         }
@@ -342,7 +342,7 @@
         }
         
         if (typeof ym !== "undefined") {
-          ym(XXXXXXXX, 'reachGoal', 'javascript_error', {
+          ym(106723032, 'reachGoal', 'javascript_error', {
             error_message: e.message,
             error_url: e.filename,
             error_line: e.lineno
