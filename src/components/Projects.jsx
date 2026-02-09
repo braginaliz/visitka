@@ -52,9 +52,9 @@ const Projects = () => {
       category: "fullstack",
       color: "#FF6B8B",
       images: [
-        "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=1200&q=80",
-        require("../assets/images/proiects/stellar-burger/stellar-burger-2.png"),
-        "https://images.unsplash.com/photo-1551782450-17144efb9c50?w=1200&q=80",
+        "public/assets/images/stellar-burger-1.jpg",
+        "public/assets/images/stellar-burger-2.png",
+        "public/assets/images/stellar-burger-3.jpg",
       ],
       video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     },
