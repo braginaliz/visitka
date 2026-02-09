@@ -1,13 +1,14 @@
 import React from 'react';
 import { FaArrowDown, FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Avatar from '../../public/assets/images/avatar-portfolio.jpg'
 
 const Hero = () => {
 
   const techStack = ['React', 'Node.js', 'TypeScript', 'MongoDB'];
 
   // Что-то сделать с лицом (попроще)
-  const avatarUrl = "https://i.ibb.co/hJ6qZSDF/photo-5208418342518068321-y.jpg";
+  const avatarUrl = Avatar;
 
   // Функции трекинга для Hero
   const trackCVDownload = () => {
