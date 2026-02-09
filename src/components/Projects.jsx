@@ -26,7 +26,6 @@ import SkillSwap2 from "../../public/assets/images/Skill-swap-2.png";
 import Ono1 from "../../public/assets/images/Ono-1.jpg";
 import Ono2 from "../../public/assets/images/Ono-2.jpg";
 
-
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [filter, setFilter] = useState("all");
@@ -117,10 +116,7 @@ const Projects = () => {
       status: "Завершен",
       category: "frontend",
       color: "#45B7D1",
-      images: [
-        Ono1,
-        Ono2,
-      ],
+      images: [Ono1, Ono2],
     },
     {
       id: 4,
@@ -150,10 +146,7 @@ const Projects = () => {
       status: "Завершен",
       category: "frontend",
       color: "#96CEB4",
-      images: [
-        Weblarek1,
-        Weblarek2,
-      ],
+      images: [Weblarek1, Weblarek2],
     },
     {
       id: 5,
@@ -183,10 +176,7 @@ const Projects = () => {
       status: "В разработке",
       category: "fullstack",
       color: "#FFB347",
-      images: [
-        SkillSwap2,
-        SkillSwap1,
-      ],
+      images: [SkillSwap2, SkillSwap1],
     },
     {
       id: 6,

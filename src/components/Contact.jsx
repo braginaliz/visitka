@@ -104,7 +104,7 @@ const Contact = () => {
       ),
       title: 'Локация',
       value: 'Москва, Россия',
-      link: 'https://maps.google.com/?q=Moscow',
+      link: 'https://yandex.ru/maps/213/moscow/',
       color: '#45B7D1',
       delay: 0.3
     },
@@ -190,7 +190,7 @@ const Contact = () => {
         </motion.div>
 
         <div className="contact-main">
-          {/* Левая колонка - Контактная информация */}
+          {/* Левая колонка - Контактная инфо */}
           <motion.div 
             className="contact-info-wrapper"
             initial={{ opacity: 0, x: -50 }}
