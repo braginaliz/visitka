@@ -19,6 +19,8 @@ import stellarBurger3 from "../../public/assets/images/stellar-burger-3.jpg";
 import stellarBurgerVideo from "../../public/assets/images/stellar-burger-video.mp4";
 import Mesto1 from "../../public/assets/images/mesto-1.jpg";
 import Mesto2 from "../../public/assets/images/mesto-2.jpg";
+import Weblarek1 from "../../public/assets/images/weblarek1.jpg";
+import Weblarek2 from "../../public/assets/images/weblarek2.jpg"
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -138,14 +140,14 @@ const Projects = () => {
         "Webpack",
         "Jest",
       ],
-      github: "https://github.com",
-      demo: "https://web-market-demo.com",
+      github: "https://github.com/braginaliz/portfolio-web-larek.git",
+      demo: "https://web-larek-frontend.vercel.app/",
       status: "Завершен",
       category: "frontend",
       color: "#96CEB4",
       images: [
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80",
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80",
+        Weblarek1,
+        Weblarek2,
       ],
     },
     {
