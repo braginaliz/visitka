@@ -16,6 +16,7 @@ import {
 import stellarBurger1 from '../../public/assets/images/stellar-burger-1.jpg';
 import stellarBurger2 from '../../public/assets/images/stellar-burger-2.png';
 import stellarBurger3 from '../../public/assets/images/stellar-burger-3.jpg';
+import stellarBurgerVideo from '../../public/assets/images/stellar-burger-video.mp4';
 
 
 const Projects = () => {
@@ -51,7 +52,7 @@ const Projects = () => {
       ],
       github:
         "https://github.com/braginaliz/portfolio-stellar-burger-lab-b.git",
-      demo: "https://stellar-burger-demo.com",
+      demo: "https://stellarburgers.education-services.ru/",
       status: "Завершен",
       category: "fullstack",
       color: "#FF6B8B",
@@ -60,7 +61,7 @@ const Projects = () => {
         stellarBurger2,
         stellarBurger3,
       ],
-      video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      video: stellarBurgerVideo,
     },
     {
       id: 2,
