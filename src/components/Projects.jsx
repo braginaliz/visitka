@@ -35,7 +35,7 @@ const Projects = () => {
         'Интеграция с сервером через REST API'
       ],
       technologies: ['React', 'TypeScript', 'Redux Toolkit', 'WebSocket', 'Jest', 'Cypress', 'Node.js', 'Express'],
-      github: 'https://github.com',
+      github: 'https://github.com/braginaliz/portfolio-stellar-burger-lab-b.git',
       demo: 'https://stellar-burger-demo.com',
       status: 'Завершен',
       category: 'fullstack',
