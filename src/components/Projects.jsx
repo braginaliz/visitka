@@ -22,7 +22,7 @@ import Mesto2 from "../../public/assets/images/mesto-2.jpg";
 import Weblarek1 from "../../public/assets/images/weblarek1.jpg";
 import Weblarek2 from "../../public/assets/images/weblarek2.jpg";
 import SkillSwap1 from "../../public/assets/images/Skill-swap-1.png";
-import SkillSwap2 from "../../public/assets/images/Skill-swasp-2.png";
+import SkillSwap2 from "../../public/assets/images/Skill-swap-2.png";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -181,8 +181,8 @@ const Projects = () => {
       category: "fullstack",
       color: "#FFB347",
       images: [
-        SkillSwap1,
         SkillSwap2,
+        SkillSwap1,
       ],
     },
     {
