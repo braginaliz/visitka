@@ -13,6 +13,10 @@ import {
   FaImage,
   FaPlayCircle,
 } from "react-icons/fa";
+import stellarBurger1 from '../../public/assets/images/stellar-burger-1.jpg';
+import stellarBurger2 from '../../public/assets/images/stellar-burger-2.png';
+import stellarBurger3 from '../../public/assets/images/stellar-burger-3.jpg';
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -52,9 +56,9 @@ const Projects = () => {
       category: "fullstack",
       color: "#FF6B8B",
       images: [
-        "public/assets/images/stellar-burger-1.jpg",
-        "public/assets/images/stellar-burger-2.png",
-        "public/assets/images/stellar-burger-3.jpg",
+        stellarBurger1,
+        stellarBurger2,
+        stellarBurger3,
       ],
       video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     },
