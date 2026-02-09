@@ -578,6 +578,111 @@
   }
 }
 
+/* Добавляем отступ от хедера для iPad и телефона */
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: 90px; /* Увеличиваем отступ сверху для iPad */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 100px; /* Еще больше отступ для телефона */
+  }
+}
+
+/* iPad портретная ориентация (768px - 1024px) */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+  
+  .hero {
+    padding-top: 95px;
+    min-height: 92vh;
+  }
+  
+  .tech-stack {
+    display: none !important; /* Скрываем навыки на iPad */
+  }
+  
+  .avatar-wrapper {
+    margin-bottom: 25px !important;
+  }
+}
+
+/* iPad ландшафтная ориентация */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+  
+  .hero {
+    padding-top: 90px;
+    min-height: 88vh;
+  }
+  
+  .tech-stack {
+    display: none !important; /* Скрываем навыки на iPad */
+  }
+  
+  .avatar-wrapper {
+    margin-bottom: 20px !important;
+  }
+  
+  .hero-container {
+    gap: 40px;
+  }
+}
+
+/* iPad Pro 10.5" и 11" */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1194px) {
+  
+  .hero {
+    padding-top: 100px;
+  }
+  
+  .tech-stack {
+    display: none !important; /* Скрываем навыки на iPad Pro */
+  }
+}
+
+/* iPad Pro 12.9" */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) {
+  
+  .hero {
+    padding-top: 110px;
+  }
+  
+  .tech-stack {
+    display: none !important; /* Скрываем навыки на больших iPad */
+  }
+  
+  .hero-container {
+    gap: 70px;
+  }
+}
+
+/* Мобильные телефоны */
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 85px;
+    min-height: 85vh;
+  }
+  
+  /* Уменьшаем верхний отступ на очень маленьких экранах */
+  @media (max-height: 700px) {
+    .hero {
+      padding-top: 75px;
+      min-height: 82vh;
+    }
+  }
+}
+
 /* Тёмная тема */
 .App.dark .hero {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
