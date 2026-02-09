@@ -1,18 +1,270 @@
-# React + Vite
+# My Portfolio 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎨 О проекте
 
-Currently, two official plugins are available:
+Современное, анимированное портфолио, созданное с использованием React и Framer Motion. Портфолио демонстрирует профессиональные навыки, проекты и опыт работы с интерактивными элементами и плавными анимациями.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Особенности
 
-## React Compiler
+- **Адаптивный дизайн** - оптимизирован для всех устройств
+- **Темная/светлая тема** - переключение между темами
+- **Интерактивные элементы**:
+  - Кастомный курсор в виде сердечка
+  - Конфетти-анимация
+  - Плавающие кнопки
+  - Анимированные частицы фона
+- **Аналитика** - интеграция с Яндекс.Метрикой и Google Analytics
+- **Производительность**:
+  - Ленивая загрузка компонентов
+  - Оптимизация сборки через Vite
+  - React Compiler для оптимизации
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🛠 Технологии
 
-Note: This will impact Vite dev & build performances.
+### Основной стек:
+- **React 19** - современный фреймворк
+- **TypeScript** - типизация
+- **Framer Motion 12** - анимации
+- **Vite 7** - сборка и дев-сервер
 
-## Expanding the ESLint configuration
+### Библиотеки:
+- `react-icons` - иконки
+- `react-tabs` - компоненты табов
+- `babel-plugin-react-compiler` - оптимизация React
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Инструменты разработки:
+- **ESLint** - линтинг кода
+- **Babel** - транспиляция
+- **PostCSS** - обработка CSS
+
+## 📁 Структура проекта
+
+```
+my-portfolio/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Projects.jsx
+│   │   └── Contact.jsx
+│   ├── styles/
+│   │   ├── main.css
+│   │   ├── components/
+│   │   │   ├── header.css
+│   │   │   ├── hero.css
+│   │   │   ├── about.css
+│   │   │   ├── experience.css
+│   │   │   ├── skills.css
+│   │   │   ├── projects.css
+│   │   │   ├── contact.css
+│   │   │   └── footer.css
+│   │   └── utilities/
+│   │       ├── responsive.css
+│   │       └── theme.css
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── .eslintrc.js
+├── vite.config.js
+├── package.json
+└── README.md
+```
+
+## 🚀 Установка и запуск
+
+### Предварительные требования
+- Node.js 18+ 
+- npm или yarn
+
+### Установка
+
+1. Клонируйте репозиторий:
+```bash
+git clone <repository-url>
+cd my-portfolio
+```
+
+2. Установите зависимости:
+```bash
+npm install
+# или
+yarn install
+```
+
+3. Настройте переменные окружения (опционально):
+Создайте файл `.env` в корне проекта:
+```env
+VITE_GA_ID=your-google-analytics-id
+VITE_YANDEX_METRICA=your-yandex-metrica-id
+```
+
+### Скрипты
+
+```bash
+# Запуск dev-сервера
+npm run dev
+
+# Сборка для production
+npm run build
+
+# Предпросмотр собранного проекта
+npm run preview
+
+# Линтинг кода
+npm run lint
+```
+
+## 🎯 Настройка аналитики
+
+### Google Analytics
+1. Получите ID измерения в Google Analytics
+2. Добавьте в `.env`:
+```env
+VITE_GA_ID=G-XXXXXXXXXX
+```
+
+### Яндекс.Метрика
+1. Создайте счетчик в Яндекс.Метрике
+2. Добавьте в `.env`:
+```env
+VITE_YANDEX_METRICA=12345678
+```
+
+## 🎨 Кастомизация
+
+### Темы
+Проект поддерживает светлую и темную тему. CSS-переменные определены в `theme.css`:
+
+```css
+:root {
+  --primary-pink: #FF6B8B;
+  --secondary-pink: #FF8FA3;
+  --light-pink: #FFCCD5;
+  /* ... */
+}
+
+.dark-theme {
+  --bg-primary: #0a0a0a;
+  --text-primary: #ffffff;
+  /* ... */
+}
+```
+
+### Анимации
+Используйте Framer Motion для добавления анимаций:
+
+```jsx
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+>
+  Ваш контент
+</motion.div>
+```
+
+### Контент
+Обновите информацию в соответствующих компонентах:
+- `Hero.jsx` - главная информация
+- `About.jsx` - о себе
+- `Experience.jsx` - опыт работы
+- `Projects.jsx` - проекты
+- `Contact.jsx` - контакты
+
+## 📊 Отслеживание событий
+
+В проекте реализована система трекинга событий:
+
+```javascript
+// Отслеживание клика
+trackEvent('button_click', { button_type: 'contact' });
+
+// Отслеживание скролла
+trackEvent('scroll_depth', { depth: '50%' });
+```
+
+## 🚀 Производительность
+
+### Оптимизации:
+- **Code Splitting** - ленивая загрузка компонентов
+- **Image Optimization** - оптимизация изображений через Vite
+- **Tree Shaking** - удаление неиспользуемого кода
+- **React Compiler** - автоматическая оптимизация React компонентов
+
+### Проверка производительности:
+```bash
+# Анализ бандла
+npx vite-bundle-analyzer
+```
+
+## 🌐 Деплой
+
+### На Vercel (рекомендуется):
+1. Импортируйте проект в Vercel
+2. Настройте переменные окружения
+3. Деплой автоматический при push в main
+
+### На Netlify:
+```bash
+# Сборка
+npm run build
+
+# Деплой
+netlify deploy --prod
+```
+
+## 📱 Адаптивность
+
+Проект оптимизирован для:
+- 📱 Мобильные устройства (320px+)
+- 💻 Планшеты (768px+)
+- 🖥️ Десктопы (1024px+)
+
+## 🛠️ Troubleshooting
+
+### Проблемы с зависимостями:
+```bash
+# Очистка кэша
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### Проблемы со сборкой:
+```bash
+# Проверка конфигурации
+npx vite build --debug
+```
+
+## 🤝 Вклад в проект
+
+1. Форкните репозиторий
+2. Создайте ветку для фичи (`git checkout -b feature/amazing-feature`)
+3. Закоммитьте изменения (`git commit -m 'Add amazing feature'`)
+4. Запушьте в ветку (`git push origin feature/amazing-feature`)
+5. Откройте Pull Request
+
+## 📄 Лицензия
+
+Этот проект лицензируется под MIT License - смотрите файл LICENSE для деталей.
+
+## 👤 Автор
+
+**Елизавета Брагина**
+- Портфолио: [ссылка на сайт]
+- GitHub: [@username]
+- LinkedIn: [ссылка на LinkedIn]
+
+## 🙏 Благодарности
+
+- [React](https://reactjs.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Vite](https://vitejs.dev/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+
+---
+
+⭐️ Если вам понравился этот проект, поставьте звезду на GitHub!
