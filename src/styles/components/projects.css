@@ -837,3 +837,126 @@
     aspect-ratio: 4/3;
   }
 }
+
+/* Темная тема */
+.App.dark #projects.section {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%);
+  border-color: #4a5568;
+}
+
+.App.dark #projects .section-title,
+.App.dark .project-title,
+.App.dark .modal-title,
+.App.dark .modal-features h3,
+.App.dark .modal-technologies h3,
+.App.dark .project-gallery-section h3,
+.App.dark .video-section h3 {
+  color: #e2e8f0;
+}
+
+.App.dark #projects .section-subtitle,
+.App.dark .project-description,
+.App.dark .modal-description,
+.App.dark .modal-features li,
+.App.dark .stat-label {
+  color: #a0aec0;
+}
+
+.App.dark .project-card {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.App.dark .project-header {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
+
+.App.dark .project-status {
+  background: rgba(45, 55, 72, 0.9);
+  color: var(--primary-pink);
+  border-color: #4a5568;
+}
+
+.App.dark .project-icon {
+  background: #2d3748;
+}
+
+.App.dark .project-image-count {
+  background: rgba(45, 55, 72, 0.9);
+  color: #e2e8f0;
+  border-color: #4a5568;
+}
+
+.App.dark .tech-tag {
+  background: linear-gradient(135deg, #4a5568, #2d3748);
+  border-color: #4a5568;
+  color: var(--primary-pink);
+}
+
+.App.dark .project-footer {
+  border-top-color: #4a5568;
+}
+
+.App.dark .stat-card {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.App.dark .filter-btn {
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+.App.dark .filter-btn:hover {
+  border-color: var(--primary-pink);
+  color: var(--primary-pink);
+}
+
+.App.dark .modal-content {
+  background: #2d3748;
+}
+
+.App.dark .modal-close {
+  background: #2d3748;
+  color: #e2e8f0;
+  border-color: #4a5568;
+}
+
+.App.dark .modal-icon {
+  background: #2d3748;
+}
+
+.App.dark .modal-header {
+  border-bottom-color: #4a5568;
+}
+
+.App.dark .project-gallery-section,
+.App.dark .video-section {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  border-color: #4a5568;
+}
+
+.App.dark .gallery-item {
+  border-color: #4a5568;
+}
+
+.App.dark .video-container {
+  border-color: #4a5568;
+}
+
+.App.dark .modal-links {
+  border-top-color: #4a5568;
+}
+
+.App.dark .modal-close:hover {
+  background: var(--primary-pink);
+  color: white;
+}
+
+.App.dark .stat-number {
+  color: var(--primary-pink);
+}
+
+.App.dark .stat-icon {
+  color: var(--primary-pink);
+}

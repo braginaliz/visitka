@@ -382,3 +382,192 @@
     font-size: 28px;
   }
 }
+
+/* Темная тема */
+.App.dark .skills-section {
+  background: transparent;
+}
+
+.App.dark .skills-title {
+  color: #e2e8f0;
+}
+
+.App.dark .skills-subtitle {
+  color: #a0aec0;
+}
+
+.App.dark .category-tab {
+  background: #2d3748;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+.App.dark .category-tab:hover {
+  border-color: rgba(255, 107, 139, 0.4);
+  background: rgba(255, 107, 139, 0.1);
+}
+
+.App.dark .category-tab.active {
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 5px 20px rgba(255, 107, 139, 0.3);
+}
+
+.App.dark .category-tab.active .tab-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.App.dark .tab-count {
+  background: rgba(255, 107, 139, 0.2);
+  color: var(--primary-pink);
+}
+
+.App.dark .category-indicator {
+  background: linear-gradient(135deg, #4a5568, #2d3748);
+  border-color: #4a5568;
+}
+
+.App.dark .active-category {
+  color: #e2e8f0;
+}
+
+.App.dark .skills-count {
+  background: #2d3748;
+  color: #a0aec0;
+  border-color: #4a5568;
+}
+
+.App.dark .skill-card {
+  background: #2d3748;
+  border-color: #4a5568;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.App.dark .skill-card:hover {
+  box-shadow: 0 10px 25px rgba(255, 107, 139, 0.2);
+  border-color: var(--primary-pink);
+}
+
+.App.dark .skill-name {
+  color: #e2e8f0;
+}
+
+.App.dark .skill-experience {
+  color: #a0aec0;
+}
+
+.App.dark .skill-level-badge {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.App.dark .skill-progress-background {
+  background: #4a5568;
+}
+
+.App.dark .skill-milestone {
+  background: #2d3748;
+}
+
+.App.dark .skill-milestone.active {
+  background: #e2e8f0;
+}
+
+.App.dark .skill-description {
+  border-top-color: #4a5568;
+}
+
+.App.dark .skill-star {
+  background: #4a5568;
+}
+
+.App.dark .skill-star.active {
+  background: #ffd700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.App.dark .skill-proficiency {
+  background: rgba(255, 107, 139, 0.1);
+  color: var(--primary-pink);
+  border: 1px solid rgba(255, 107, 139, 0.3);
+}
+
+.App.dark .skills-summary {
+  background: #2d3748;
+  border-color: #4a5568;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.App.dark .summary-stat {
+  color: #e2e8f0;
+}
+
+.App.dark .stat-number {
+  color: var(--primary-pink);
+}
+
+.App.dark .stat-label {
+  color: #a0aec0;
+}
+
+.App.dark .skill-level-badge.beginner {
+  background: linear-gradient(45deg, #4a5568, #2d3748);
+  color: #a0aec0;
+}
+
+.App.dark .skill-level-badge.intermediate {
+  background: linear-gradient(45deg, #3182ce, #2c5282);
+  color: #e2e8f0;
+}
+
+.App.dark .skill-level-badge.advanced {
+  background: linear-gradient(45deg, #38a169, #276749);
+  color: #e2e8f0;
+}
+
+.App.dark .skill-level-badge.expert {
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+  color: white;
+}
+
+
+.App.dark .skill-progress-fill.beginner {
+  background: linear-gradient(to right, #4a5568, #718096);
+}
+
+.App.dark .skill-progress-fill.intermediate {
+  background: linear-gradient(to right, #3182ce, #63b3ed);
+}
+
+.App.dark .skill-progress-fill.advanced {
+  background: linear-gradient(to right, #38a169, #68d391);
+}
+
+.App.dark .skill-progress-fill.expert {
+  background: linear-gradient(to right, var(--primary-pink), var(--dark-pink));
+}
+
+
+.App.dark .skill-icon-bg {
+  background: rgba(255, 107, 139, 0.1);
+}
+
+.App.dark .skill-icon-bg svg {
+  color: var(--primary-pink);
+}
+
+@keyframes float-dark {
+  0%, 100% { 
+    transform: translateY(0px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  50% { 
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 30px rgba(255, 107, 139, 0.2);
+  }
+}
+
+.App.dark .skill-card:hover {
+  animation: float-dark 3s ease-in-out infinite;
+}

@@ -254,3 +254,70 @@
   letter-spacing: 1px;
   font-weight: 600;
 }
+
+/* Темная тема */
+.App.dark .experience-item-content {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.App.dark .experience-description p,
+.App.dark .experience-highlights li,
+.App.dark .experience-subtitle,
+.App.dark .experience-stat-label {
+  color: #a0aec0;
+}
+
+.App.dark .experience-title,
+.App.dark .experience-role-title,
+.App.dark .experience-stat-item:not(:last-child):after,
+.App.dark .experience-stat-item:nth-child(odd):after {
+  color: #e2e8f0;
+}
+
+.App.dark .experience-company,
+.App.dark .experience-period,
+.App.dark .experience-stat-number {
+  color: var(--primary-pink);
+}
+
+.App.dark .experience-stats {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.App.dark .experience-period {
+  background: rgba(255, 107, 139, 0.1);
+  color: var(--primary-pink);
+}
+
+.App.dark .experience-tag {
+  background: rgba(255, 107, 139, 0.1);
+  color: var(--primary-pink);
+}
+
+.App.dark .experience-tag:hover {
+  background: var(--primary-pink);
+  color: white;
+}
+
+.App.dark .experience-timeline:before {
+  background: linear-gradient(to bottom, var(--primary-pink), var(--dark-pink));
+  opacity: 0.2;
+}
+
+.App.dark .experience-timeline-dot {
+  background: #2d3748;
+  border-color: var(--primary-pink);
+  box-shadow: 0 0 0 4px rgba(255, 107, 139, 0.05);
+}
+
+.App.dark .experience-highlights li:before {
+  background: var(--primary-pink);
+  color: white;
+}
+
+.App.dark .experience-stat-item:not(:last-child):after,
+.App.dark .experience-stat-item:nth-child(odd):after {
+  background: rgba(255, 107, 139, 0.1);
+}

@@ -199,7 +199,6 @@
     <!-- Трекинг загрузки страницы -->
     <script>
       window.addEventListener("load", function () {
-        // Отслеживаем просмотр страницы
         if (typeof gtag !== "undefined") {
           gtag("event", "page_view", {
             page_title: document.title,
@@ -307,7 +306,6 @@
       </div>
     </noscript>
 
-    <!-- Hidden accessibility text -->
     <div hidden aria-hidden="true">
       <h1 id="page-title">
         Портфолио Брагиной Елизаветы - Fullstack-разработчик
@@ -322,18 +320,17 @@
 
     <!-- СКРИПТ ДЛЯ ИГНОРИРОВАНИЯ ОШИБОК -->
     <script>
-      // Игнорируем ошибки от расширений браузера
+  
       const originalError = console.error;
       console.error = function(...args) {
         if (args[0] && typeof args[0] === 'string' && 
             (args[0].includes('ScreenshotHelper') || 
              args[0].includes('content.js'))) {
-          return; // Игнорируем ошибки расширений
+          return; 
         }
         originalError.apply(console, args);
       };
 
-      // Игнорируем предупреждения от расширений
       const originalWarn = console.warn;
       console.warn = function(...args) {
         if (args[0] && typeof args[0] === 'string' && 
@@ -343,7 +340,6 @@
         originalWarn.apply(console, args);
       };
 
-      // Проверяем загрузку CSS
       document.addEventListener('DOMContentLoaded', function() {
         const links = document.querySelectorAll('link[rel="stylesheet"]');
         links.forEach(link => {

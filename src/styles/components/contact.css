@@ -725,3 +725,110 @@
     text-align: center;
   }
 }
+
+/* Темная тема */
+.App.dark .contact-title,
+.App.dark .info-header h3,
+.App.dark .social-section h4,
+.App.dark .form-title-main,
+.App.dark .availability-header h4,
+.App.dark .cta-content h4,
+.App.dark .success-container h4,
+.App.dark .detail-value {
+  color: #e2e8f0;
+}
+
+.App.dark .contact-subtitle,
+.App.dark .info-header p,
+.App.dark .social-section p,
+.App.dark .form-title-sub,
+.App.dark .availability-type,
+.App.dark .cta-content p,
+.App.dark .success-container p,
+.App.dark .form-note,
+.App.dark .detail-title,
+.App.dark .social-label {
+  color: #a0aec0;
+}
+
+.App.dark .contact-info-card,
+.App.dark .form-container,
+.App.dark .availability-card,
+.App.dark .cta-card {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.App.dark .contact-detail-card,
+.App.dark .social-card {
+  background: #2d3748;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+.App.dark .contact-detail-card:hover,
+.App.dark .social-card:hover {
+  border-color: var(--primary-pink);
+}
+
+.App.dark .detail-icon-wrapper {
+  background: rgba(255, 107, 139, 0.1);
+}
+
+.App.dark .social-section {
+  border-top-color: #4a5568;
+}
+
+.App.dark .floating-label input,
+.App.dark .floating-label textarea {
+  color: #e2e8f0;
+  border-bottom-color: #4a5568;
+}
+
+.App.dark .floating-label label {
+  color: #a0aec0;
+}
+
+.App.dark .back-btn {
+  background: #2d3748;
+  color: var(--primary-pink);
+  border-color: var(--primary-pink);
+}
+
+.App.dark .back-btn:hover {
+  background: var(--primary-pink);
+  color: white;
+}
+
+.App.dark .availability-item {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.App.dark .availability-tag {
+  background: rgba(255, 107, 139, 0.1);
+  color: var(--primary-pink);
+  border-color: #4a5568;
+}
+
+.App.dark .availability-tag:hover {
+  background: var(--primary-pink);
+  color: white;
+}
+
+.App.dark .availability-card:hover,
+.App.dark .cta-card:hover,
+.App.dark .contact-detail-card:hover,
+.App.dark .contact-info-card:hover,
+.App.dark .form-container:hover,
+.App.dark .social-card:hover {
+  border-color: var(--primary-pink);
+}
+
+.App.dark .detail-arrow {
+  color: var(--primary-pink);
+}
+
+.App.dark .success-circle {
+  background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+}
