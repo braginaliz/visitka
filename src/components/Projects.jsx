@@ -13,11 +13,12 @@ import {
   FaImage,
   FaPlayCircle,
 } from "react-icons/fa";
-import stellarBurger1 from '../../public/assets/images/stellar-burger-1.jpg';
-import stellarBurger2 from '../../public/assets/images/stellar-burger-2.png';
-import stellarBurger3 from '../../public/assets/images/stellar-burger-3.jpg';
-import stellarBurgerVideo from '../../public/assets/images/stellar-burger-video.mp4';
-
+import stellarBurger1 from "../../public/assets/images/stellar-burger-1.jpg";
+import stellarBurger2 from "../../public/assets/images/stellar-burger-2.png";
+import stellarBurger3 from "../../public/assets/images/stellar-burger-3.jpg";
+import stellarBurgerVideo from "../../public/assets/images/stellar-burger-video.mp4";
+import Mesto1 from "../../public/assets/images/mesto-1.jpg";
+import Mesto2 from "../../public/assets/images/mesto-2.jpg";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -56,11 +57,7 @@ const Projects = () => {
       status: "Завершен",
       category: "fullstack",
       color: "#FF6B8B",
-      images: [
-        stellarBurger1,
-        stellarBurger2,
-        stellarBurger3,
-      ],
+      images: [stellarBurger1, stellarBurger2, stellarBurger3],
       video: stellarBurgerVideo,
     },
     {
@@ -86,15 +83,12 @@ const Projects = () => {
         "Babel",
         "ES6+",
       ],
-      github: "https://github.com",
-      demo: "https://mesto-project-demo.com",
+      github: "https://github.com/braginaliz/portfolio-mesto-project.git",
+      demo: "https://braginaliz.github.io/mesto-project-ff/",
       status: "Завершен",
       category: "fullstack",
       color: "#4ECDC4",
-      images: [
-        "https://images.unsplash.com/photo-1529612700005-e35377bf1415?w=1200&q=80",
-        "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&q=80",
-      ],
+      images: [Mesto1, Mesto2],
     },
     {
       id: 3,
@@ -211,7 +205,7 @@ const Projects = () => {
       ],
       github: "https://github.com",
       demo: "https://travelapp-demo.com",
-      status: "Завершен",
+      status: "В разработке",
       category: "mobile",
       color: "#6A5ACD",
       images: [
