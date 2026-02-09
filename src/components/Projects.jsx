@@ -20,7 +20,9 @@ import stellarBurgerVideo from "../../public/assets/images/stellar-burger-video.
 import Mesto1 from "../../public/assets/images/mesto-1.jpg";
 import Mesto2 from "../../public/assets/images/mesto-2.jpg";
 import Weblarek1 from "../../public/assets/images/weblarek1.jpg";
-import Weblarek2 from "../../public/assets/images/weblarek2.jpg"
+import Weblarek2 from "../../public/assets/images/weblarek2.jpg";
+import SkillSwap1 from "../../public/assets/images/Skill-swap-1.png";
+import SkillSwap2 from "../../public/assets/images/Skill-swasp-2.png";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -173,14 +175,14 @@ const Projects = () => {
         "Docker",
         "Redis",
       ],
-      github: "https://github.com",
+      github: "https://github.com/Pr-month/SkillSwap_25-26.git",
       demo: "https://skillswap-demo.com",
       status: "В разработке",
       category: "fullstack",
       color: "#FFB347",
       images: [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80",
+        SkillSwap1,
+        SkillSwap2,
       ],
     },
     {
