@@ -23,6 +23,9 @@ import Weblarek1 from "../../public/assets/images/weblarek1.jpg";
 import Weblarek2 from "../../public/assets/images/weblarek2.jpg";
 import SkillSwap1 from "../../public/assets/images/Skill-swap-1.png";
 import SkillSwap2 from "../../public/assets/images/Skill-swap-2.png";
+import Ono1 from "../../public/assets/images/Ono-1.jpg";
+import Ono2 from "../../public/assets/images/Ono-2.jpg";
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -110,13 +113,13 @@ const Projects = () => {
       ],
       technologies: ["HTML5", "CSS3", "JavaScript", "Figma", "Sass", "BEM"],
       github: "https://github.com/braginaliz/ono-tebe-nado.git",
-      demo: "https://auction-house-demo.com",
+      demo: "https://ono-tebe-nado.vercel.app/",
       status: "Завершен",
       category: "frontend",
       color: "#45B7D1",
       images: [
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80",
-        "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80",
+        Ono1,
+        Ono2,
       ],
     },
     {
